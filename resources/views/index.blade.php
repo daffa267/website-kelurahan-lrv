@@ -28,7 +28,8 @@
         }
 
         :root {
-            --primary-900: #800020; /* Deep maroon */
+            --primary-900: #800020;
+            /* Deep maroon */
             --primary-800: #900030;
             --primary-700: #A00040;
             --primary-600: #B00050;
@@ -36,8 +37,10 @@
             --primary-400: #D00070;
             --primary-gradient: linear-gradient(135deg, var(--primary-800) 0%, var(--primary-600) 100%);
             --primary-gradient-hover: linear-gradient(135deg, var(--primary-700) 0%, var(--primary-500) 100%);
-            --accent-color: #FFD700; /* Gold accent */
-            --dark-maroon: #500000; /* Dark maroon for footer */
+            --accent-color: #FFD700;
+            /* Gold accent */
+            --dark-maroon: #500000;
+            /* Dark maroon for footer */
         }
 
         body {
@@ -112,7 +115,8 @@
             padding: 16px 20px;
             margin: 0 4px;
             transition: color 0.3s ease, transform 0.3s ease;
-            color: #fff !important;;
+            color: #fff !important;
+            ;
             font-weight: 500;
             text-decoration: none;
             display: inline-block;
@@ -152,13 +156,27 @@
 
         /* Animations */
         @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .animate-fade-in {
@@ -184,7 +202,8 @@
         @media (max-width: 768px) {
             .hero-banner {
                 min-height: 250px;
-                height: calc(85vh - 60px); /* 60px header mobile */
+                height: calc(85vh - 60px);
+                /* 60px header mobile */
             }
         }
 
@@ -195,7 +214,7 @@
             width: 100%;
             height: 100%;
             background-size: cover;
-            background-position: top; 
+            background-position: top;
             opacity: 0;
             transition: opacity 1.5s ease-in-out;
         }
@@ -207,7 +226,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.65) 100%);
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.65) 100%);
             z-index: 1;
         }
 
@@ -341,7 +360,7 @@
             right: 0;
             bottom: 0;
             background: radial-gradient(circle at 10% 20%, rgba(80, 0, 0, 0.8) 0%, transparent 50%),
-                        radial-gradient(circle at 90% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
+                radial-gradient(circle at 90% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%);
             pointer-events: none;
         }
 
@@ -608,7 +627,7 @@
         .view-all-btn:hover {
             background-color: var(--primary-700);
             transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         /* Service Cards */
@@ -659,7 +678,8 @@
         .card-description {
             color: #4b5563;
             margin-bottom: 24px;
-            flex-grow: 1; /* Pushes the link to the bottom */
+            flex-grow: 1;
+            /* Pushes the link to the bottom */
         }
 
         .service-card.cta-card .card-description {
@@ -1010,15 +1030,22 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             z-index: 10;
         }
-        
+
         .map-popup {
             font-family: 'Inter', sans-serif;
         }
 
         /* Animations */
         @keyframes bounce-slow {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         .animate-bounce-slow {
@@ -1026,8 +1053,15 @@
         }
 
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .animate-fade-up {
@@ -1052,20 +1086,20 @@
                 height: 50vh;
                 min-height: 400px;
             }
-            
+
             .news-carousel-slide .flex {
                 flex-direction: column;
             }
-            
+
             .news-carousel-slide .lg\:w-1\/2 {
                 width: 100%;
                 height: 300px;
             }
-            
+
             .gallery-masonry {
                 grid-template-columns: 1fr;
             }
-            
+
             .stat-tabs {
                 overflow-x: auto;
                 white-space: nowrap;
@@ -1077,16 +1111,16 @@
                 height: 45vh;
                 min-height: 350px;
             }
-            
+
             .section-header {
                 margin-bottom: 24px;
             }
-            
+
             .stat-card {
                 padding: 20px;
             }
         }
-        
+
         .service-card {
             padding: 24px;
         }
@@ -1097,6 +1131,7 @@
             top: 50%;
             transform: translateY(-50%);
         }
+
         @media (max-width: 768px) {
             .hero-banner .social-vertical {
                 left: 0.5rem;
@@ -1107,30 +1142,39 @@
                 transform: none;
             }
         }
+
         /* Custom Header Blur & Hover */
         .custom-header-blur {
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
             transition: background 0.3s;
         }
+
         .custom-header-blur:hover,
         .custom-header-blur:focus-within {
-            background: rgba(220,38,38,0.93); /* merah (red-600) */
+            background: rgba(220, 38, 38, 0.93);
+            /* merah (red-600) */
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
         }
+
         .custom-header-blur .text-white {
             transition: color 0.3s;
         }
+
         .custom-header-blur:hover .text-white {
             color: #fff;
         }
+
         @media (max-width: 640px) {
             .custom-header-blur .floating img {
-                height: 2.25rem !important; /* h-9 */
-                width: 2.25rem !important;  /* w-9 */
+                height: 2.25rem !important;
+                /* h-9 */
+                width: 2.25rem !important;
+                /* w-9 */
             }
+
             .custom-header-blur span {
                 font-size: 0.8rem !important;
             }
@@ -1140,17 +1184,21 @@
             position: relative;
             overflow: hidden;
             width: 100%;
-            height: 400px; /* Fixed height for consistency */
+            height: 400px;
+            /* Fixed height for consistency */
         }
+
         #carousel-banner .carousel-slides {
             display: flex;
             height: 100%;
             transition: transform 0.5s ease;
         }
+
         #carousel-banner .carousel-slide {
             min-width: 100%;
             position: relative;
         }
+
         #carousel-banner .carousel-img {
             width: auto;
             height: auto;
@@ -1160,6 +1208,7 @@
             margin: 0 auto;
             display: block;
         }
+
         #carousel-banner .carousel-slide {
             display: flex;
             align-items: center;
@@ -1183,15 +1232,18 @@
             visibility: hidden;
             transition: opacity 0.3s ease, visibility 0.3s ease;
         }
+
         .service-modal-overlay.active {
             opacity: 1;
             visibility: visible;
         }
+
         .service-modal-container {
             background: white;
             border-radius: 16px;
             width: 90%;
-            max-width: 800px; /* Diperbesar dari 680px */
+            max-width: 800px;
+            /* Diperbesar dari 680px */
             max-height: 90vh;
             overflow: hidden;
             display: flex;
@@ -1199,9 +1251,11 @@
             transform: scale(0.95) translateY(20px);
             transition: transform 0.3s ease;
         }
+
         .service-modal-overlay.active .service-modal-container {
             transform: scale(1) translateY(0);
         }
+
         .service-modal-header {
             display: flex;
             align-items: center;
@@ -1210,6 +1264,7 @@
             border-bottom: 1px solid #e5e7eb;
             background: #f9fafb;
         }
+
         .service-modal-header h3 {
             font-size: 1.25rem;
             font-weight: 700;
@@ -1217,10 +1272,12 @@
             display: flex;
             align-items: center;
         }
+
         .service-modal-header h3 i {
             margin-right: 12px;
             color: var(--primary-600);
         }
+
         .service-modal-close-btn {
             background: #e5e7eb;
             border: none;
@@ -1230,20 +1287,26 @@
             cursor: pointer;
             transition: background-color 0.2s;
         }
+
         .service-modal-close-btn:hover {
             background: #d1d5db;
         }
+
         .service-modal-body {
             padding: 24px;
-            overflow-y: auto; /* Tambahkan scrollbar jika konten panjang */
-            height: 450px; /* Beri tinggi tetap agar modal tidak berubah ukuran */
+            overflow-y: auto;
+            /* Tambahkan scrollbar jika konten panjang */
+            height: 450px;
+            /* Beri tinggi tetap agar modal tidak berubah ukuran */
             flex-grow: 1;
         }
+
         .service-modal-tabs {
             display: flex;
             border-bottom: 2px solid #e5e7eb;
             margin-bottom: 20px;
         }
+
         .service-modal-tab-btn {
             padding: 10px 20px;
             border: none;
@@ -1254,9 +1317,11 @@
             position: relative;
             transition: color 0.3s;
         }
+
         .service-modal-tab-btn.active {
             color: var(--primary-800);
         }
+
         .service-modal-tab-btn.active::after {
             content: '';
             position: absolute;
@@ -1266,45 +1331,56 @@
             height: 2px;
             background: var(--primary-800);
         }
+
         .service-modal-tab-content {
             display: none;
             animation: fadeIn 0.4s;
         }
+
         .service-modal-tab-content.active {
             display: block;
         }
+
         .service-modal-tab-content h4 {
             font-weight: 700;
             margin-bottom: 12px;
             color: #374151;
         }
+
         .service-modal-tab-content ul {
             list-style: none;
             padding-left: 0;
             margin: 0;
         }
+
         .service-modal-tab-content ul li {
             display: flex;
             align-items: flex-start;
             padding: 8px 0;
         }
+
         .service-modal-tab-content ul li i {
-            color: #16a34a; /* green-600 */
+            color: #16a34a;
+            /* green-600 */
             margin-right: 10px;
             margin-top: 5px;
         }
+
         .service-modal-tab-content .timeline {
             position: relative;
             padding-left: 25px;
             border-left: 2px solid #e5e7eb;
         }
+
         .service-modal-tab-content .timeline-item {
             position: relative;
             padding-bottom: 20px;
         }
+
         .service-modal-tab-content .timeline-item:last-child {
             padding-bottom: 0;
         }
+
         .service-modal-tab-content .timeline-dot {
             position: absolute;
             left: -34px;
@@ -1315,9 +1391,11 @@
             background-color: #d1d5db;
             border: 3px solid white;
         }
+
         .service-modal-tab-content .timeline-item:first-child .timeline-dot {
             background-color: var(--primary-800);
         }
+
         .service-modal-footer {
             padding: 16px 24px;
             border-top: 1px solid #e5e7eb;
@@ -1326,6 +1404,7 @@
             gap: 12px;
             background: #f9fafb;
         }
+
         .btn-secondary {
             background-color: #e5e7eb;
             color: #374151;
@@ -1335,6 +1414,7 @@
             font-weight: 600;
             transition: background-color 0.2s;
         }
+
         .btn-secondary:hover {
             background-color: #d1d5db;
         }
@@ -1359,19 +1439,19 @@
 
                 <div class="hidden md:flex items-center space-x-6">
                     <div class="hidden md:flex items-center space-x-1 ml-8">
-                        <a href="index.blade.php" class="nav-item active">
+                        <a href="/" class="nav-item {{ request()->is('/') ? 'active' : '' }}">
                             <i class="fas fa-home mr-2"></i> Beranda
                         </a>
-                        <a href="news.blade.php" class="nav-item">
+                        <a href="/news" class="nav-item {{ request()->is('news') ? 'active' : '' }}">
                             <i class="fas fa-newspaper mr-2"></i> Berita
                         </a>
-                        <a href="attent.html" class="nav-item">
+                        <a href="/attent" class="nav-item {{ request()->is('attent') ? 'active' : '' }}">
                             <i class="fas fa-bullhorn mr-2"></i> Pengumuman
                         </a>
-                        <a href="gallery.html" class="nav-item">
+                        <a href="/gallery" class="nav-item {{ request()->is('gallery') ? 'active' : '' }}">
                             <i class="fas fa-images mr-2"></i> Galeri
                         </a>
-                        <a href="download.html" class="nav-item">
+                        <a href="/download" class="nav-item {{ request()->is('download') ? 'active' : '' }}">
                             <i class="fas fa-download mr-2"></i> Download
                         </a>
                     </div>
@@ -1389,10 +1469,10 @@
 
                 <div id="mobile-menu" class="md:hidden bg-white shadow-xl hidden">
                     <div class="container mx-auto px-4 py-3 space-y-2">
-                        <a href="index.blade.php" class="block py-3 px-4 rounded-lg bg-gray-100 text-primary-800 font-medium">
+                        <a href="index.html" class="block py-3 px-4 rounded-lg bg-gray-100 text-primary-800 font-medium">
                             <i class="fas fa-home mr-3"></i> Beranda
                         </a>
-                        <a href="news.blade.php" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+                        <a href="news.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
                             <i class="fas fa-newspaper mr-3"></i> Berita
                         </a>
                         <a href="attent.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
@@ -1417,39 +1497,32 @@
 
     <div class="hero-banner">
         <div
-          class="absolute left-6 top-1/3 z-30 flex flex-col space-y-4 social-vertical"
-        >
-          <a
-            href="#"
-            class="group w-12 h-12 rounded-full bg-gradient-to-r from-blue-600/20 to-blue-700/20 backdrop-blur-md flex items-center justify-center text-white hover:from-blue-600/40 hover:to-blue-700/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20"
-          >
-            <i
-              class="fab fa-facebook-f text-lg group-hover:scale-110 transition-transform duration-300"
-            ></i>
-          </a>
+            class="absolute left-6 top-1/3 z-30 flex flex-col space-y-4 social-vertical">
+            <a
+                href="#"
+                class="group w-12 h-12 rounded-full bg-gradient-to-r from-blue-600/20 to-blue-700/20 backdrop-blur-md flex items-center justify-center text-white hover:from-blue-600/40 hover:to-blue-700/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20">
+                <i
+                    class="fab fa-facebook-f text-lg group-hover:scale-110 transition-transform duration-300"></i>
+            </a>
 
-          <a
-            href="#"
-            class="group w-12 h-12 rounded-full bg-gradient-to-r from-sky-500/20 to-sky-600/20 backdrop-blur-md flex items-center justify-center text-white hover:from-sky-500/40 hover:to-sky-600/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20"
-          >
-            <i
-              class="fab fa-twitter text-lg group-hover:scale-110 transition-transform duration-300"
-            ></i>
-          </a>
+            <a
+                href="#"
+                class="group w-12 h-12 rounded-full bg-gradient-to-r from-sky-500/20 to-sky-600/20 backdrop-blur-md flex items-center justify-center text-white hover:from-sky-500/40 hover:to-sky-600/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20">
+                <i
+                    class="fab fa-twitter text-lg group-hover:scale-110 transition-transform duration-300"></i>
+            </a>
 
-          <a
-            href="#"
-            class="group w-12 h-12 rounded-full bg-gradient-to-r from-pink-500/20 to-rose-600/20 backdrop-blur-md flex items-center justify-center text-white hover:from-pink-500/40 hover:to-rose-600/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20"
-          >
-            <i class="fab fa-instagram text-lg group-hover:scale-110 transition-transform duration-300"></i>
-          </a>
+            <a
+                href="#"
+                class="group w-12 h-12 rounded-full bg-gradient-to-r from-pink-500/20 to-rose-600/20 backdrop-blur-md flex items-center justify-center text-white hover:from-pink-500/40 hover:to-rose-600/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20">
+                <i class="fab fa-instagram text-lg group-hover:scale-110 transition-transform duration-300"></i>
+            </a>
 
-          <a
-            href="#"
-            class="group w-12 h-12 rounded-full bg-gradient-to-r from-red-500/20 to-red-700/20 backdrop-blur-md flex items-center justify-center text-white hover:from-red-500/40 hover:to-red-700/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20"
-          >
-            <i class="fab fa-youtube text-lg group-hover:scale-110 transition-transform duration-300"></i>
-          </a>
+            <a
+                href="#"
+                class="group w-12 h-12 rounded-full bg-gradient-to-r from-red-500/20 to-red-700/20 backdrop-blur-md flex items-center justify-center text-white hover:from-red-500/40 hover:to-red-700/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20">
+                <i class="fab fa-youtube text-lg group-hover:scale-110 transition-transform duration-300"></i>
+            </a>
         </div>
         <div class="hero-slide active" style="background-image: url('https://icms.tanjungpinangkota.go.id/image/posting/berita/7243000000/original/1661907840_7f5de7f0c78f57a90c30.jpg');"></div>
 
@@ -1464,7 +1537,7 @@
                 <a href="#berita-final" class="btn-primary px-6 py-3 rounded-full hover:scale-105">
                     <i class="fas fa-newspaper mr-2"></i> Berita Utama
                 </a>
-                
+
                 <a href="#layanan" class="glass-card px-6 py-3 rounded-full text-white font-medium hover:bg-white/20 hover:scale-105 transition-all">
                     <i class="fas fa-handshake mr-2"></i> Layanan Kami
                 </a>
@@ -1479,33 +1552,33 @@
     </div>
 
 
-        <div id="mobile-menu" class="md:hidden bg-white shadow-xl hidden">
-            <div class="container mx-auto px-4 py-3 space-y-2">
-                <a href="index.html" class="block py-3 px-4 rounded-lg bg-gray-100 text-primary-800 font-medium">
-                    <i class="fas fa-home mr-3"></i> Beranda
+    <div id="mobile-menu" class="md:hidden bg-white shadow-xl hidden">
+        <div class="container mx-auto px-4 py-3 space-y-2">
+            <a href="index.html" class="block py-3 px-4 rounded-lg bg-gray-100 text-primary-800 font-medium">
+                <i class="fas fa-home mr-3"></i> Beranda
+            </a>
+            <a href="news.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+                <i class="fas fa-newspaper mr-3"></i> Berita
+            </a>
+            <a href="attent.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+                <i class="fas fa-bullhorn mr-3"></i> Pengumuman
+            </a>
+            <a href="gallery.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+                <i class="fas fa-images mr-3"></i> Galeri
+            </a>
+            <a href="download.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+                <i class="fas fa-download mr-3"></i> Download
+            </a>
+            <a href="#layanan" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+                <i class="fas fa-handshake mr-3"></i> Layanan
+            </a>
+            <div class="pt-2">
+                <a href="https://icms.tanjungpinangkota.go.id" class="btn-primary block text-center py-3">
+                    <i class="fas fa-sign-in-alt mr-2"></i> Login Admin
                 </a>
-                <a href="news.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
-                    <i class="fas fa-newspaper mr-3"></i> Berita
-                </a>
-                <a href="attent.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
-                    <i class="fas fa-bullhorn mr-3"></i> Pengumuman
-                </a>
-                <a href="gallery.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
-                    <i class="fas fa-images mr-3"></i> Galeri
-                </a>
-                <a href="download.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
-                    <i class="fas fa-download mr-3"></i> Download
-                </a>
-                <a href="#layanan" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
-                    <i class="fas fa-handshake mr-3"></i> Layanan
-                </a>
-                <div class="pt-2">
-                    <a href="https://icms.tanjungpinangkota.go.id" class="btn-primary block text-center py-3">
-                        <i class="fas fa-sign-in-alt mr-2"></i> Login Admin
-                    </a>
-                </div>
             </div>
         </div>
+    </div>
     </nav>
 
     <main id="content" class="fixed-container py-16">
@@ -1520,7 +1593,7 @@
                     </div>
                     <div class="absolute inset-0 border-2 border-transparent group-hover:border-[#900030] transition-all duration-300 rounded-xl"></div>
                 </div>
-                
+
                 <div class="stat-card group" data-aos="fade-up" data-aos-delay="200">
                     <div class="stat-number animate-bounce-slow" style="animation-delay: 0.2s">24</div>
                     <div class="text-gray-600 font-medium">RT</div>
@@ -1529,7 +1602,7 @@
                     </div>
                     <div class="absolute inset-0 border-2 border-transparent group-hover:border-[#900030] transition-all duration-300 rounded-xl"></div>
                 </div>
-                
+
                 <div class="stat-card group" data-aos="fade-up" data-aos-delay="300">
                     <div class="stat-number animate-bounce-slow" style="animation-delay: 0.3s">8</div>
                     <div class="text-gray-600 font-medium">RW</div>
@@ -1538,7 +1611,7 @@
                     </div>
                     <div class="absolute inset-0 border-2 border-transparent group-hover:border-[#900030] transition-all duration-300 rounded-xl"></div>
                 </div>
-                
+
                 <div class="stat-card group" data-aos="fade-up" data-aos-delay="400">
                     <div class="stat-number animate-bounce-slow" style="animation-delay: 0.4s">12</div>
                     <div class="text-gray-600 font-medium">Program Unggulan</div>
@@ -1564,7 +1637,7 @@
                         </a>
                     </div>
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                        
+
                         <div class="lg:col-span-2">
                             <div id="news-carousel-wrapper" class="relative rounded-xl overflow-hidden shadow-lg" style="height: 400px;">
                                 <div class="news-carousel-track h-full">
@@ -1617,14 +1690,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <button class="news-carousel-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 w-10 h-10 rounded-full shadow-lg flex items-center justify-center transition-all z-10">
                                     <i class="fas fa-chevron-left"></i>
                                 </button>
                                 <button class="news-carousel-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/90 hover:bg-white text-gray-800 w-10 h-10 rounded-full shadow-lg flex items-center justify-center transition-all z-10">
                                     <i class="fas fa-chevron-right"></i>
                                 </button>
-                                
+
                                 <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
                                     <button class="news-indicator w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-all" data-slide="0"></button>
                                     <button class="news-indicator w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-all" data-slide="1"></button>
@@ -1641,7 +1714,7 @@
                                         <button class="news-tab-btn" data-tab="populer">Populer</button>
                                     </div>
                                 </div>
-                                
+
                                 <div class="overflow-visible" style="width: 100%;">
                                     <div id="terkini" class="news-tab-content active">
                                         <ul class="space-y-3">
@@ -1713,7 +1786,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                                
+
                                 <div class="mt-4 pt-3 border-t border-gray-200">
                                     <a href="news.html" class="w-full inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all">
                                         <i class="fas fa-newspaper mr-2"></i> Lihat Semua Berita
@@ -1785,14 +1858,14 @@
                 </h2>
                 <p class="text-gray-600">Wilayah administrasi Kelurahan Tanjungpinang Kota</p>
             </div>
-            
+
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
                 <div class="lg:col-span-2">
                     <div class="bg-white rounded-xl shadow-md border border-gray-100 overflow-hidden h-full">
                         <div class="relative h-full">
                             <div id="map" style="height:100%;width:100%; z-index: 1;">
-                                </div>
-                            
+                            </div>
+
                             <div class="absolute bottom-4 right-4 flex space-x-2 z-[20]">
                                 <button id="zoom-in" class="bg-white/90 hover:bg-white border border-gray-200 rounded-lg px-3 py-2 text-gray-700 hover:text-[#900030] transition-colors shadow-sm">
                                     <i class="fas fa-plus text-sm"></i>
@@ -1805,7 +1878,7 @@
                                 </button>
                             </div>
                         </div>
-                        
+
                         <div class="p-4 bg-gray-50 border-t">
                             <div class="flex items-center justify-between text-sm">
                                 <div class="flex items-center space-x-4">
@@ -1827,7 +1900,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="space-y-4 flex flex-col">
                     <div class="bg-white rounded-xl p-5 shadow-md border border-gray-100 flex-1">
                         <div class="flex items-center mb-3">
@@ -1842,7 +1915,7 @@
                             <p><i class="fas fa-clock text-[#900030] mr-2"></i>Senin-Jumat: 08.00-16.00 WIB</p>
                         </div>
                     </div>
-                    
+
                     <div class="bg-white rounded-xl p-5 shadow-md border border-gray-100 flex-1">
                         <div class="flex items-center mb-3">
                             <div class="w-10 h-10 bg-blue-50 rounded-lg flex items-center justify-center mr-3">
@@ -1863,7 +1936,7 @@
                             </ul>
                         </div>
                     </div>
-                    
+
                     <div class="bg-white rounded-xl p-5 shadow-md border border-gray-100 flex-1">
                         <div class="flex items-center mb-3">
                             <div class="w-10 h-10 bg-green-50 rounded-lg flex items-center justify-center mr-3">
@@ -1972,19 +2045,19 @@
                             <canvas id="populationChart"></canvas>
                         </div>
                     </div>
-                    
+
                     <div class="stat-tab-content" id="age-tab">
                         <div class="chart-container" style="height: 400px;">
                             <canvas id="ageDistributionChart"></canvas>
                         </div>
                     </div>
-                    
+
                     <div class="stat-tab-content" id="education-tab">
                         <div class="chart-container" style="height: 400px;">
                             <canvas id="educationChart"></canvas>
                         </div>
                     </div>
-                    
+
                     <div class="stat-tab-content" id="job-tab">
                         <div class="chart-container" style="height: 400px;">
                             <canvas id="jobChart"></canvas>
@@ -2002,7 +2075,7 @@
                 </h2>
                 <p class="text-gray-600">Program-program terbaik untuk kemajuan masyarakat</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl p-6 text-white relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
                     <div class="absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full -mr-10 -mt-10"></div>
@@ -2018,7 +2091,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="bg-gradient-to-br from-green-500 to-green-600 rounded-xl p-6 text-white relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
                     <div class="absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full -mr-10 -mt-10"></div>
                     <div class="relative z-10">
@@ -2033,7 +2106,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl p-6 text-white relative overflow-hidden" data-aos="fade-up" data-aos-delay="300">
                     <div class="absolute top-0 right-0 w-20 h-20 bg-white/10 rounded-full -mr-10 -mt-10"></div>
                     <div class="relative z-10">
@@ -2100,9 +2173,9 @@
                         <h3>Infografis</h3>
                     </div>
                     <div class="info-card-body p-0">
-                        <img src="https://icms.tanjungpinangkota.go.id/api/getDownloadInfografis/7243000000/1729582929_24ae13f6024ae1b0768c.jpg" 
-                             alt="Infografis" 
-                             class="w-full h-auto object-cover">
+                        <img src="https://icms.tanjungpinangkota.go.id/api/getDownloadInfografis/7243000000/1729582929_24ae13f6024ae1b0768c.jpg"
+                            alt="Infografis"
+                            class="w-full h-auto object-cover">
                     </div>
                     <div class="info-card-footer">
                         <a href="#" class="info-card-link">
@@ -2241,7 +2314,7 @@
             // Mobile menu toggle
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
-            
+
             mobileMenuBtn.addEventListener('click', function() {
                 const isHidden = mobileMenu.classList.toggle('hidden');
                 mobileMenuBtn.innerHTML = isHidden ?
@@ -2264,7 +2337,7 @@
             const slides = document.querySelectorAll('.hero-slide');
             const totalSlides = slides.length;
             let slideInterval;
-            
+
             function showSlide(index) {
                 slides.forEach((slide, i) => {
                     slide.classList.toggle('active', i === index);
@@ -2293,112 +2366,120 @@
             startSlideShow();
 
             // News Carousel
-             const newsWrapper = document.getElementById('news-carousel-wrapper');
-             const newsTrack = document.querySelector('.news-carousel-track');
-             let newsSlides = document.querySelectorAll('.news-carousel-slide');
-             const newsPrevBtn = document.querySelector('.news-carousel-prev');
-             const newsNextBtn = document.querySelector('.news-carousel-next');
-             const newsIndicators = document.querySelectorAll('.news-indicator');
+            const newsWrapper = document.getElementById('news-carousel-wrapper');
+            const newsTrack = document.querySelector('.news-carousel-track');
+            let newsSlides = document.querySelectorAll('.news-carousel-slide');
+            const newsPrevBtn = document.querySelector('.news-carousel-prev');
+            const newsNextBtn = document.querySelector('.news-carousel-next');
+            const newsIndicators = document.querySelectorAll('.news-indicator');
 
-             let currentNewsIndex = 1; // Mulai dari slide pertama yang asli
-             let isTransitioning = false;
-             const slideDuration = 4000; // 4 detik
-             let newsInterval;
+            let currentNewsIndex = 1; // Mulai dari slide pertama yang asli
+            let isTransitioning = false;
+            const slideDuration = 4000; // 4 detik
+            let newsInterval;
 
-             const firstClone = newsSlides[0].cloneNode(true);
-             const lastClone = newsSlides[newsSlides.length - 1].cloneNode(true);
+            const firstClone = newsSlides[0].cloneNode(true);
+            const lastClone = newsSlides[newsSlides.length - 1].cloneNode(true);
 
-             newsTrack.appendChild(firstClone);
-             newsTrack.insertBefore(lastClone, newsSlides[0]);
-             newsSlides = document.querySelectorAll('.news-carousel-slide');
+            newsTrack.appendChild(firstClone);
+            newsTrack.insertBefore(lastClone, newsSlides[0]);
+            newsSlides = document.querySelectorAll('.news-carousel-slide');
 
-             newsTrack.style.transition = 'none';
-             newsTrack.style.transform = `translateX(-${currentNewsIndex * 100}%)`;
+            newsTrack.style.transition = 'none';
+            newsTrack.style.transform = `translateX(-${currentNewsIndex * 100}%)`;
 
-             setTimeout(() => {
+            setTimeout(() => {
                 newsTrack.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1)';
-             }, 50);
+            }, 50);
 
-             const moveToSlide = () => {
+            const moveToSlide = () => {
                 newsTrack.style.transform = `translateX(-${currentNewsIndex * 100}%)`;
                 updateIndicators();
-             };
+            };
 
-             const updateIndicators = () => {
+            const updateIndicators = () => {
                 let indicatorIndex = currentNewsIndex - 1;
                 if (currentNewsIndex === 0) {
-                 indicatorIndex = newsIndicators.length - 1;
+                    indicatorIndex = newsIndicators.length - 1;
                 } else if (currentNewsIndex === newsSlides.length - 1) {
-                 indicatorIndex = 0;
+                    indicatorIndex = 0;
                 }
                 newsIndicators.forEach((indicator, i) => {
-                 indicator.classList.toggle('active', i === indicatorIndex);
+                    indicator.classList.toggle('active', i === indicatorIndex);
                 });
-             };
+            };
 
-             newsTrack.addEventListener('transitionend', () => {
+            newsTrack.addEventListener('transitionend', () => {
                 isTransitioning = false;
                 if (currentNewsIndex === 0) {
-                 newsTrack.style.transition = 'none';
-                 currentNewsIndex = newsSlides.length - 2;
-                 newsTrack.style.transform = `translateX(-${currentNewsIndex * 100}%)`;
-                } 
+                    newsTrack.style.transition = 'none';
+                    currentNewsIndex = newsSlides.length - 2;
+                    newsTrack.style.transform = `translateX(-${currentNewsIndex * 100}%)`;
+                }
                 if (currentNewsIndex === newsSlides.length - 1) {
-                 newsTrack.style.transition = 'none';
-                 currentNewsIndex = 1;
-                 newsTrack.style.transform = `translateX(-${currentNewsIndex * 100}%)`;
+                    newsTrack.style.transition = 'none';
+                    currentNewsIndex = 1;
+                    newsTrack.style.transform = `translateX(-${currentNewsIndex * 100}%)`;
                 }
                 setTimeout(() => {
-                 newsTrack.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1)';
+                    newsTrack.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1)';
                 });
-             });
-         
-             const nextNewsSlide = () => {
+            });
+
+            const nextNewsSlide = () => {
                 if (isTransitioning) return;
                 isTransitioning = true;
                 currentNewsIndex++;
                 moveToSlide();
-             };
+            };
 
-             const prevNewsSlide = () => {
+            const prevNewsSlide = () => {
                 if (isTransitioning) return;
                 isTransitioning = true;
                 currentNewsIndex--;
                 moveToSlide();
-             };
-         
-             function startNewsCarousel() {
+            };
+
+            function startNewsCarousel() {
                 stopNewsCarousel();
                 newsInterval = setInterval(nextNewsSlide, slideDuration);
-             }
+            }
 
-             function stopNewsCarousel() {
+            function stopNewsCarousel() {
                 clearInterval(newsInterval);
-             }
+            }
 
-             newsNextBtn.addEventListener('click', () => { nextNewsSlide(); stopNewsCarousel(); startNewsCarousel(); });
-             newsPrevBtn.addEventListener('click', () => { prevNewsSlide(); stopNewsCarousel(); startNewsCarousel(); });
-             newsIndicators.forEach((indicator, index) => {
+            newsNextBtn.addEventListener('click', () => {
+                nextNewsSlide();
+                stopNewsCarousel();
+                startNewsCarousel();
+            });
+            newsPrevBtn.addEventListener('click', () => {
+                prevNewsSlide();
+                stopNewsCarousel();
+                startNewsCarousel();
+            });
+            newsIndicators.forEach((indicator, index) => {
                 indicator.addEventListener('click', () => {
-                 if (isTransitioning) return;
-                 isTransitioning = true;
-                 currentNewsIndex = index + 1;
-                 moveToSlide();
-                 stopNewsCarousel();
-                 startNewsCarousel();
+                    if (isTransitioning) return;
+                    isTransitioning = true;
+                    currentNewsIndex = index + 1;
+                    moveToSlide();
+                    stopNewsCarousel();
+                    startNewsCarousel();
                 });
-             });
+            });
 
-             newsWrapper.addEventListener('mouseenter', stopNewsCarousel);
-             newsWrapper.addEventListener('mouseleave', startNewsCarousel);
+            newsWrapper.addEventListener('mouseenter', stopNewsCarousel);
+            newsWrapper.addEventListener('mouseleave', startNewsCarousel);
 
-             updateIndicators();
-             startNewsCarousel();
+            updateIndicators();
+            startNewsCarousel();
 
-             // === FUNGSIONALITAS NEWS TABS (TERKINI & POPULER) ===
+            // === FUNGSIONALITAS NEWS TABS (TERKINI & POPULER) ===
             const newsTabBtns = document.querySelectorAll('.news-tab-btn');
             const newsTabContents = document.querySelectorAll('.news-tab-content');
-            
+
             newsTabBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
                     // Nonaktifkan semua tombol dan konten
@@ -2436,7 +2517,9 @@
                 shadowSize: [41, 41]
             });
 
-            L.marker([0.9276, 104.4435], { icon: kelurahanIcon }).addTo(map)
+            L.marker([0.9276, 104.4435], {
+                    icon: kelurahanIcon
+                }).addTo(map)
                 .bindPopup(`...`) // Konten popup
                 .openPopup();
 
@@ -2460,22 +2543,36 @@
                     legend: {
                         position: 'bottom',
                         labels: {
-                            font: { weight: '500' }, padding: 20, usePointStyle: true, pointStyle: 'rectRounded'
+                            font: {
+                                weight: '500'
+                            },
+                            padding: 20,
+                            usePointStyle: true,
+                            pointStyle: 'rectRounded'
                         }
                     },
                     tooltip: {
                         backgroundColor: 'rgba(0, 0, 0, 0.8)',
-                        titleFont: { size: 14, weight: 'bold' },
-                        bodyFont: { size: 12 },
-                        padding: 12, cornerRadius: 8,
+                        titleFont: {
+                            size: 14,
+                            weight: 'bold'
+                        },
+                        bodyFont: {
+                            size: 12
+                        },
+                        padding: 12,
+                        cornerRadius: 8,
                         callbacks: {
                             label: (context) => `${context.label}: ${context.raw.toLocaleString()}`
                         }
                     }
                 },
-                animation: { duration: 1000, easing: 'easeOutQuart' }
+                animation: {
+                    duration: 1000,
+                    easing: 'easeOutQuart'
+                }
             };
-            
+
             let populationChart, ageChart, educationChart, jobChart;
 
             function createPopulationChart() {
@@ -2491,13 +2588,16 @@
                             borderWidth: 3,
                         }]
                     },
-                    options: {...chartOptions, cutout: '60%'}
+                    options: {
+                        ...chartOptions,
+                        cutout: '60%'
+                    }
                 });
             }
 
             function createAgeChart() {
-                 const ctx = document.getElementById('ageDistributionChart').getContext('2d');
-                 return new Chart(ctx, {
+                const ctx = document.getElementById('ageDistributionChart').getContext('2d');
+                return new Chart(ctx, {
                     type: 'bar',
                     data: {
                         labels: ['0-17', '18-25', '26-45', '46-65', '>65'],
@@ -2510,13 +2610,20 @@
                             borderRadius: 6
                         }]
                     },
-                    options: {...chartOptions, scales: { y: { beginAtZero: true } }}
-                 });
+                    options: {
+                        ...chartOptions,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
             }
-            
+
             function createEducationChart() {
-                 const ctx = document.getElementById('educationChart').getContext('2d');
-                 return new Chart(ctx, {
+                const ctx = document.getElementById('educationChart').getContext('2d');
+                return new Chart(ctx, {
                     type: 'pie',
                     data: {
                         labels: ['SD', 'SMP', 'SMA/SMK', 'Diploma', 'Sarjana', 'Lainnya'],
@@ -2527,12 +2634,12 @@
                         }]
                     },
                     options: chartOptions
-                 });
+                });
             }
 
             function createJobChart() {
-                 const ctx = document.getElementById('jobChart').getContext('2d');
-                 return new Chart(ctx, {
+                const ctx = document.getElementById('jobChart').getContext('2d');
+                return new Chart(ctx, {
                     type: 'line',
                     data: {
                         labels: ['PNS/TNI/Polri', 'Swasta', 'Wiraswasta', 'Pelajar', 'Lainnya'],
@@ -2545,31 +2652,47 @@
                             tension: 0.3
                         }]
                     },
-                    options: {...chartOptions, scales: { y: { beginAtZero: true } }}
-                 });
+                    options: {
+                        ...chartOptions,
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
             }
 
             const statTabs = document.querySelectorAll('.stat-tab');
             const statTabContents = document.querySelectorAll('.stat-tab-content');
-            
+
             let activeChart = null;
+
             function activateTab(tab) {
                 statTabs.forEach(t => t.classList.remove('active'));
                 statTabContents.forEach(c => c.classList.remove('active'));
-                
+
                 tab.classList.add('active');
                 const tabId = tab.getAttribute('data-tab');
                 document.getElementById(`${tabId}-tab`).classList.add('active');
 
-                if(activeChart) {
+                if (activeChart) {
                     activeChart.destroy();
                 }
 
-                switch(tabId) {
-                    case 'population': activeChart = createPopulationChart(); break;
-                    case 'age': activeChart = createAgeChart(); break;
-                    case 'education': activeChart = createEducationChart(); break;
-                    case 'job': activeChart = createJobChart(); break;
+                switch (tabId) {
+                    case 'population':
+                        activeChart = createPopulationChart();
+                        break;
+                    case 'age':
+                        activeChart = createAgeChart();
+                        break;
+                    case 'education':
+                        activeChart = createEducationChart();
+                        break;
+                    case 'job':
+                        activeChart = createJobChart();
+                        break;
                 }
             }
 
@@ -2581,13 +2704,13 @@
             activateTab(document.querySelector('.stat-tab.active'));
         });
     </script>
-     <div id="visitorPopup" class="fixed right-0 top-1/2 transform -translate-y-1/2 z-50 hidden transition-all duration-300 ease-out translate-x-full">
+    <div id="visitorPopup" class="fixed right-0 top-1/2 transform -translate-y-1/2 z-50 hidden transition-all duration-300 ease-out translate-x-full">
         <div class="bg-white rounded-l-lg shadow-xl border border-gray-200 w-64 relative">
             <button id="closePopup" class="absolute -left-14 top-1/2 transform -translate-y-1/2 bg-red-600 text-white rounded-l-lg shadow-lg hover:bg-red-700 transition border-t border-b border-l border-gray-200 h-28 w-14 flex flex-col items-center justify-center">
                 <span class="text-[14px] font-medium transform -rotate-90 whitespace-nowrap flex items-center gap-1">
                     Kunjungan
                     <span class="bg-white rounded-full p-1 flex items-center justify-center h-5 w-5">
-                    <i class="fas fa-chevron-down text-[10px] text-red-600"></i>
+                        <i class="fas fa-chevron-down text-[10px] text-red-600"></i>
                     </span>
                 </span>
             </button>
@@ -2597,14 +2720,14 @@
                     <h3 class="text-white font-bold text-sm">Statistik Kunjungan</h3>
                     <p class="text-red-100 text-xs">Jumlah kunjungan website</p>
                 </div>
-                
+
                 <div class="py-2">
                     <div class="mb-3">
                         <h4 class="font-semibold text-gray-700 text-xs">Total Visitor</h4>
                         <p class="text-xl font-bold">262.522</p>
                         <p class="text-green-500 text-xs">10 Online</p>
                     </div>
-                    
+
                     <div>
                         <h4 class="font-semibold text-gray-700 text-xs">Total View</h4>
                         <p class="text-xl font-bold">1.408.960</p>
@@ -2618,44 +2741,44 @@
         <span class="text-[14px] font-medium transform -rotate-90 whitespace-nowrap flex items-center gap-1.5">
             Kunjungan
             <span class="bg-white rounded-full p-1.5 flex items-center justify-center h-5 w-5">
-            <i class="fas fa-chevron-up text-xs text-red-600"></i>
+                <i class="fas fa-chevron-up text-xs text-red-600"></i>
             </span>
         </span>
     </button>
-  </div>
-</div>
+    </div>
+    </div>
 
-<script>
-  const toggleButton = document.getElementById('togglePopup');
-  const closeButton = document.getElementById('closePopup');
-  const popup = document.getElementById('visitorPopup');
+    <script>
+        const toggleButton = document.getElementById('togglePopup');
+        const closeButton = document.getElementById('closePopup');
+        const popup = document.getElementById('visitorPopup');
 
-  // Open popup with bounce effect
-  toggleButton.addEventListener('click', function() {
-    popup.classList.remove('hidden');
-    setTimeout(() => {
-      popup.classList.remove('translate-x-full');
-    }, 10);
-  });
+        // Open popup with bounce effect
+        toggleButton.addEventListener('click', function() {
+            popup.classList.remove('hidden');
+            setTimeout(() => {
+                popup.classList.remove('translate-x-full');
+            }, 10);
+        });
 
-  // Close popup with slide out
-  closeButton.addEventListener('click', function() {
-    popup.classList.add('translate-x-full');
-    popup.classList.remove('animate-[bounceInRight_0.3s]');
-    setTimeout(() => {
-      popup.classList.add('hidden');
-    }, 300);
-  });
-</script>
+        // Close popup with slide out
+        closeButton.addEventListener('click', function() {
+            popup.classList.add('translate-x-full');
+            popup.classList.remove('animate-[bounceInRight_0.3s]');
+            setTimeout(() => {
+                popup.classList.add('hidden');
+            }, 300);
+        });
+    </script>
 
-<script>
-    // Data untuk semua layanan
-    const serviceData = {
-        'ktp': {
-            icon: 'fa-id-card',
-            title: 'Layanan Pembuatan KTP Elektronik',
-            description: 'Pelayanan pembuatan Kartu Tanda Penduduk (KTP) elektronik untuk warga yang telah berusia 17 tahun atau sudah menikah. KTP merupakan identitas resmi yang wajib dimiliki setiap WNI.',
-            syarat: `
+    <script>
+        // Data untuk semua layanan
+        const serviceData = {
+            'ktp': {
+                icon: 'fa-id-card',
+                title: 'Layanan Pembuatan KTP Elektronik',
+                description: 'Pelayanan pembuatan Kartu Tanda Penduduk (KTP) elektronik untuk warga yang telah berusia 17 tahun atau sudah menikah. KTP merupakan identitas resmi yang wajib dimiliki setiap WNI.',
+                syarat: `
                 <h4>Dokumen yang Diperlukan:</h4>
                 <ul>
                     <li><i class="fas fa-check-circle"></i>Fotokopi Kartu Keluarga (KK).</li>
@@ -2664,7 +2787,7 @@
                     <li><i class="fas fa-check-circle"></i>Warga yang pindah domisili: Surat Keterangan Pindah (SKP).</li>
                 </ul>
             `,
-            alur: `
+                alur: `
                 <div class="timeline">
                     <div class="timeline-item"><div class="timeline-dot"></div><h4 class="font-semibold">Langkah 1: Datang ke Kelurahan</h4><p class="text-sm text-gray-600">Pemohon datang ke kantor kelurahan dengan membawa berkas persyaratan yang lengkap.</p></div>
                     <div class="timeline-item"><div class="timeline-dot"></div><h4 class="font-semibold">Langkah 2: Verifikasi Berkas</h4><p class="text-sm text-gray-600">Petugas loket akan memverifikasi kelengkapan dan keabsahan berkas Anda.</p></div>
@@ -2672,194 +2795,205 @@
                     <div class="timeline-item"><div class="timeline-dot"></div><h4 class="font-semibold">Langkah 4: Pengambilan KTP</h4><p class="text-sm text-gray-600">Pemohon akan dihubungi oleh pihak kelurahan jika KTP-el sudah selesai dicetak dan siap diambil.</p></div>
                 </div>
             `,
-            waktu: `<h4>Estimasi Waktu Pelayanan</h4><p>Proses penerbitan KTP-el diperkirakan memakan waktu <strong>14 hari kerja</strong> sejak berkas dinyatakan lengkap oleh petugas.</p><h4 class="mt-4">Biaya</h4><p><strong>Rp 0,- (GRATIS)</strong>. Tidak dipungut biaya apapun.</p>`,
-            unduh: `<h4>Unduh Formulir F-1.21</h4><p>Silakan unduh formulir permohonan KTP di bawah ini. Isi dan bawa saat pengajuan.</p><a href="/path/to/form_ktp.pdf" download class="btn-primary inline-block mt-3" style="padding: 10px 20px;"><i class="fas fa-download mr-2"></i> Unduh Formulir</a>`,
-            detailLink: '/layanan/ktp'
-        },
-        'domisili': {
-            icon: 'fa-home',
-            title: 'Layanan Surat Keterangan Domisili',
-            description: 'Surat Keterangan Domisili adalah surat pernyataan yang menerangkan tempat tinggal atau keberadaan seseorang di wilayah kelurahan.',
-            syarat: `<h4>Dokumen yang Diperlukan:</h4><ul><li><i class="fas fa-check-circle"></i>Fotokopi KTP dan Kartu Keluarga (KK) pemohon.</li><li><i class="fas fa-check-circle"></i>Surat Pengantar dari RT/RW setempat.</li><li><i class="fas fa-check-circle"></i>Pas foto berwarna ukuran 3x4 (2 lembar).</li></ul>`,
-            alur: `<div class="timeline"><div class="timeline-item"><div class="timeline-dot"></div><h4 class="font-semibold">Langkah 1: Datang ke Kelurahan</h4><p class="text-sm text-gray-600">Pemohon datang ke kantor kelurahan dengan membawa berkas persyaratan yang lengkap.</p></div><div class="timeline-item"><div class="timeline-dot"></div><h4 class="font-semibold">Langkah 2: Verifikasi & Penerbitan</h4><p class="text-sm text-gray-600">Petugas akan memverifikasi berkas dan langsung memproses surat keterangan domisili.</p></div><div class="timeline-item"><div class="timeline-dot"></div><h4 class="font-semibold">Langkah 3: Selesai</h4><p class="text-sm text-gray-600">Surat dapat langsung diterima oleh pemohon setelah ditandatangani oleh Lurah.</p></div></div>`,
-            waktu: `<h4>Estimasi Waktu Pelayanan</h4><p>Proses dapat diselesaikan dalam <strong>1 hari kerja</strong> jika semua persyaratan lengkap dan Lurah berada di tempat.</p><h4 class="mt-4">Biaya</h4><p><strong>Rp 0,- (GRATIS)</strong>.</p>`,
-            unduh: `<p>Tidak ada formulir khusus yang perlu diunduh. Silakan datang langsung ke kantor kelurahan.</p>`,
-            detailLink: '/layanan/domisili'
-        },
-        'kelahiran': {
-            icon: 'fa-baby',
-            title: 'Layanan Pengurusan Akta Kelahiran',
-            description: 'Akta Kelahiran adalah bukti sah mengenai status dan peristiwa kelahiran seseorang yang diterbitkan oleh Dinas Kependudukan dan Catatan Sipil.',
-            syarat: `<h4>Dokumen yang Diperlukan:</h4><ul><li><i class="fas fa-check-circle"></i>Surat Keterangan Lahir dari Bidan/Dokter/RS.</li><li><i class="fas fa-check-circle"></i>Fotokopi Kartu Keluarga (KK).</li><li><i class="fas fa-check-circle"></i>Fotokopi KTP kedua orang tua.</li><li><i class="fas fa-check-circle"></i>Fotokopi Buku Nikah/Akta Perkawinan.</li><li><i class="fas fa-check-circle"></i>Fotokopi KTP 2 orang saksi.</li></ul>`,
-            alur: `<p>Proses pengajuan Akta Kelahiran kini dapat dilakukan secara online melalui situs Disdukcapil atau datang langsung ke kantor Disdukcapil. Kelurahan hanya memberikan surat pengantar jika diperlukan.</p>`,
-            waktu: `<p>Waktu penyelesaian tergantung pada antrian di Disdukcapil.</p><h4 class="mt-4">Biaya</h4><p><strong>Rp 0,- (GRATIS)</strong>.</p>`,
-            unduh: `<p>Formulir tersedia di kantor Disdukcapil atau dapat diunduh di website resmi Disdukcapil Kota Tanjungpinang.</p>`,
-            detailLink: '/layanan/akta-kelahiran'
-        },
-        'sktm': {
-            icon: 'fa-file-contract',
-            title: 'Layanan Surat Keterangan Tidak Mampu (SKTM)',
-            description: 'SKTM adalah surat yang dikeluarkan untuk keluarga yang tergolong tidak mampu secara ekonomi, digunakan untuk berbagai keperluan seperti keringanan biaya kesehatan atau pendidikan.',
-            syarat: `<h4>Dokumen yang Diperlukan:</h4><ul><li><i class="fas fa-check-circle"></i>Surat Pengantar dari RT/RW.</li><li><i class="fas fa-check-circle"></i>Fotokopi KTP dan Kartu Keluarga (KK) pemohon.</li><li><i class="fas fa-check-circle"></i>Menandatangani Surat Pernyataan Tanggung Jawab Mutlak (SPTJM).</li><li><i class="fas fa-check-circle"></i>Dokumentasi foto rumah (tampak depan, ruang tamu, dapur).</li></ul>`,
-            alur: `<p>Pemohon datang ke kelurahan dengan berkas lengkap. Petugas akan melakukan verifikasi dan jika memenuhi syarat, SKTM akan diproses.</p>`,
-            waktu: `<p><strong>1-2 hari kerja</strong>, tergantung jadwal verifikasi lapangan jika diperlukan.</p><h4 class="mt-4">Biaya</h4><p><strong>Rp 0,- (GRATIS)</strong>.</p>`,
-            unduh: `<p>Formulir SPTJM disediakan di kantor kelurahan.</p>`,
-            detailLink: '/layanan/sktm'
-        },
-        'nikah': {
-            icon: 'fa-heart',
-            title: 'Layanan Pengantar Nikah (Model N1-N4)',
-            description: 'Surat pengantar nikah adalah dokumen wajib yang dikeluarkan oleh kelurahan sebagai syarat untuk mendaftarkan pernikahan di Kantor Urusan Agama (KUA).',
-            syarat: `<h4>Dokumen yang Diperlukan:</h4><ul><li><i class="fas fa-check-circle"></i>Surat Pengantar dari RT/RW.</li><li><i class="fas fa-check-circle"></i>Fotokopi KTP calon pengantin pria dan wanita.</li><li><i class="fas fa-check-circle"></i>Fotokopi Kartu Keluarga (KK) masing-masing.</li><li><i class="fas fa-check-circle"></i>Fotokopi Akta Kelahiran masing-masing.</li><li><i class="fas fa-check-circle"></i>Pas foto berwarna 2x3 (4 lembar) dan 4x6 (2 lembar) dengan latar biru.</li><li><i class="fas fa-check-circle"></i>Surat Pernyataan Belum Menikah (jika lajang) atau Akta Cerai/Surat Kematian (jika duda/janda).</li></ul>`,
-            alur: `<p>Bawa semua berkas ke kantor kelurahan. Petugas akan memverifikasi dan membuatkan model surat N1, N2, dan N4 untuk dibawa ke KUA.</p>`,
-            waktu: `<p><strong>1 hari kerja</strong> jika berkas lengkap.</p><h4 class="mt-4">Biaya</h4><p><strong>Rp 0,- (GRATIS)</strong> untuk pengurusan di kelurahan.</p>`,
-            unduh: `<p>Formulir disediakan di kantor kelurahan.</p>`,
-            detailLink: '/layanan/nikah'
+                waktu: `<h4>Estimasi Waktu Pelayanan</h4><p>Proses penerbitan KTP-el diperkirakan memakan waktu <strong>14 hari kerja</strong> sejak berkas dinyatakan lengkap oleh petugas.</p><h4 class="mt-4">Biaya</h4><p><strong>Rp 0,- (GRATIS)</strong>. Tidak dipungut biaya apapun.</p>`,
+                unduh: `<h4>Unduh Formulir F-1.21</h4><p>Silakan unduh formulir permohonan KTP di bawah ini. Isi dan bawa saat pengajuan.</p><a href="/path/to/form_ktp.pdf" download class="btn-primary inline-block mt-3" style="padding: 10px 20px;"><i class="fas fa-download mr-2"></i> Unduh Formulir</a>`,
+                detailLink: '/layanan/ktp'
+            },
+            'domisili': {
+                icon: 'fa-home',
+                title: 'Layanan Surat Keterangan Domisili',
+                description: 'Surat Keterangan Domisili adalah surat pernyataan yang menerangkan tempat tinggal atau keberadaan seseorang di wilayah kelurahan.',
+                syarat: `<h4>Dokumen yang Diperlukan:</h4><ul><li><i class="fas fa-check-circle"></i>Fotokopi KTP dan Kartu Keluarga (KK) pemohon.</li><li><i class="fas fa-check-circle"></i>Surat Pengantar dari RT/RW setempat.</li><li><i class="fas fa-check-circle"></i>Pas foto berwarna ukuran 3x4 (2 lembar).</li></ul>`,
+                alur: `<div class="timeline"><div class="timeline-item"><div class="timeline-dot"></div><h4 class="font-semibold">Langkah 1: Datang ke Kelurahan</h4><p class="text-sm text-gray-600">Pemohon datang ke kantor kelurahan dengan membawa berkas persyaratan yang lengkap.</p></div><div class="timeline-item"><div class="timeline-dot"></div><h4 class="font-semibold">Langkah 2: Verifikasi & Penerbitan</h4><p class="text-sm text-gray-600">Petugas akan memverifikasi berkas dan langsung memproses surat keterangan domisili.</p></div><div class="timeline-item"><div class="timeline-dot"></div><h4 class="font-semibold">Langkah 3: Selesai</h4><p class="text-sm text-gray-600">Surat dapat langsung diterima oleh pemohon setelah ditandatangani oleh Lurah.</p></div></div>`,
+                waktu: `<h4>Estimasi Waktu Pelayanan</h4><p>Proses dapat diselesaikan dalam <strong>1 hari kerja</strong> jika semua persyaratan lengkap dan Lurah berada di tempat.</p><h4 class="mt-4">Biaya</h4><p><strong>Rp 0,- (GRATIS)</strong>.</p>`,
+                unduh: `<p>Tidak ada formulir khusus yang perlu diunduh. Silakan datang langsung ke kantor kelurahan.</p>`,
+                detailLink: '/layanan/domisili'
+            },
+            'kelahiran': {
+                icon: 'fa-baby',
+                title: 'Layanan Pengurusan Akta Kelahiran',
+                description: 'Akta Kelahiran adalah bukti sah mengenai status dan peristiwa kelahiran seseorang yang diterbitkan oleh Dinas Kependudukan dan Catatan Sipil.',
+                syarat: `<h4>Dokumen yang Diperlukan:</h4><ul><li><i class="fas fa-check-circle"></i>Surat Keterangan Lahir dari Bidan/Dokter/RS.</li><li><i class="fas fa-check-circle"></i>Fotokopi Kartu Keluarga (KK).</li><li><i class="fas fa-check-circle"></i>Fotokopi KTP kedua orang tua.</li><li><i class="fas fa-check-circle"></i>Fotokopi Buku Nikah/Akta Perkawinan.</li><li><i class="fas fa-check-circle"></i>Fotokopi KTP 2 orang saksi.</li></ul>`,
+                alur: `<p>Proses pengajuan Akta Kelahiran kini dapat dilakukan secara online melalui situs Disdukcapil atau datang langsung ke kantor Disdukcapil. Kelurahan hanya memberikan surat pengantar jika diperlukan.</p>`,
+                waktu: `<p>Waktu penyelesaian tergantung pada antrian di Disdukcapil.</p><h4 class="mt-4">Biaya</h4><p><strong>Rp 0,- (GRATIS)</strong>.</p>`,
+                unduh: `<p>Formulir tersedia di kantor Disdukcapil atau dapat diunduh di website resmi Disdukcapil Kota Tanjungpinang.</p>`,
+                detailLink: '/layanan/akta-kelahiran'
+            },
+            'sktm': {
+                icon: 'fa-file-contract',
+                title: 'Layanan Surat Keterangan Tidak Mampu (SKTM)',
+                description: 'SKTM adalah surat yang dikeluarkan untuk keluarga yang tergolong tidak mampu secara ekonomi, digunakan untuk berbagai keperluan seperti keringanan biaya kesehatan atau pendidikan.',
+                syarat: `<h4>Dokumen yang Diperlukan:</h4><ul><li><i class="fas fa-check-circle"></i>Surat Pengantar dari RT/RW.</li><li><i class="fas fa-check-circle"></i>Fotokopi KTP dan Kartu Keluarga (KK) pemohon.</li><li><i class="fas fa-check-circle"></i>Menandatangani Surat Pernyataan Tanggung Jawab Mutlak (SPTJM).</li><li><i class="fas fa-check-circle"></i>Dokumentasi foto rumah (tampak depan, ruang tamu, dapur).</li></ul>`,
+                alur: `<p>Pemohon datang ke kelurahan dengan berkas lengkap. Petugas akan melakukan verifikasi dan jika memenuhi syarat, SKTM akan diproses.</p>`,
+                waktu: `<p><strong>1-2 hari kerja</strong>, tergantung jadwal verifikasi lapangan jika diperlukan.</p><h4 class="mt-4">Biaya</h4><p><strong>Rp 0,- (GRATIS)</strong>.</p>`,
+                unduh: `<p>Formulir SPTJM disediakan di kantor kelurahan.</p>`,
+                detailLink: '/layanan/sktm'
+            },
+            'nikah': {
+                icon: 'fa-heart',
+                title: 'Layanan Pengantar Nikah (Model N1-N4)',
+                description: 'Surat pengantar nikah adalah dokumen wajib yang dikeluarkan oleh kelurahan sebagai syarat untuk mendaftarkan pernikahan di Kantor Urusan Agama (KUA).',
+                syarat: `<h4>Dokumen yang Diperlukan:</h4><ul><li><i class="fas fa-check-circle"></i>Surat Pengantar dari RT/RW.</li><li><i class="fas fa-check-circle"></i>Fotokopi KTP calon pengantin pria dan wanita.</li><li><i class="fas fa-check-circle"></i>Fotokopi Kartu Keluarga (KK) masing-masing.</li><li><i class="fas fa-check-circle"></i>Fotokopi Akta Kelahiran masing-masing.</li><li><i class="fas fa-check-circle"></i>Pas foto berwarna 2x3 (4 lembar) dan 4x6 (2 lembar) dengan latar biru.</li><li><i class="fas fa-check-circle"></i>Surat Pernyataan Belum Menikah (jika lajang) atau Akta Cerai/Surat Kematian (jika duda/janda).</li></ul>`,
+                alur: `<p>Bawa semua berkas ke kantor kelurahan. Petugas akan memverifikasi dan membuatkan model surat N1, N2, dan N4 untuk dibawa ke KUA.</p>`,
+                waktu: `<p><strong>1 hari kerja</strong> jika berkas lengkap.</p><h4 class="mt-4">Biaya</h4><p><strong>Rp 0,- (GRATIS)</strong> untuk pengurusan di kelurahan.</p>`,
+                unduh: `<p>Formulir disediakan di kantor kelurahan.</p>`,
+                detailLink: '/layanan/nikah'
+            }
+        };
+
+        // Ambil semua elemen yang diperlukan
+        const modalOverlay = document.getElementById('service-modal');
+        const modalCloseBtn = modalOverlay.querySelector('.service-modal-close-btn');
+        const modalTabBtns = modalOverlay.querySelectorAll('.service-modal-tab-btn');
+        const serviceCards = document.querySelectorAll('.service-card[data-service-key]');
+
+        // Fungsi untuk membuka modal
+        function openServiceModal(serviceKey) {
+            const data = serviceData[serviceKey];
+            if (!data) return;
+
+            // Populate modal content
+            modalOverlay.querySelector('#modal-title').innerHTML = `<i class="fas ${data.icon} mr-3"></i> ${data.title}`;
+            modalOverlay.querySelector('#modal-description').textContent = data.description;
+            modalOverlay.querySelector('#modal-content-syarat').innerHTML = data.syarat;
+            modalOverlay.querySelector('#modal-content-alur').innerHTML = data.alur;
+            modalOverlay.querySelector('#modal-content-waktu').innerHTML = data.waktu;
+            modalOverlay.querySelector('#modal-content-unduh').innerHTML = data.unduh;
+
+            // Reset ke tab pertama setiap kali modal dibuka
+            switchTab(modalOverlay.querySelector('.service-modal-tab-btn[data-tab="syarat"]'));
+
+            // Tampilkan modal
+            modalOverlay.classList.add('active');
         }
-    };
-    
-    // Ambil semua elemen yang diperlukan
-    const modalOverlay = document.getElementById('service-modal');
-    const modalCloseBtn = modalOverlay.querySelector('.service-modal-close-btn');
-    const modalTabBtns = modalOverlay.querySelectorAll('.service-modal-tab-btn');
-    const serviceCards = document.querySelectorAll('.service-card[data-service-key]');
 
-    // Fungsi untuk membuka modal
-    function openServiceModal(serviceKey) {
-        const data = serviceData[serviceKey];
-        if (!data) return;
+        // Fungsi untuk menutup modal
+        function closeServiceModal() {
+            modalOverlay.classList.remove('active');
+        }
 
-        // Populate modal content
-        modalOverlay.querySelector('#modal-title').innerHTML = `<i class="fas ${data.icon} mr-3"></i> ${data.title}`;
-        modalOverlay.querySelector('#modal-description').textContent = data.description;
-        modalOverlay.querySelector('#modal-content-syarat').innerHTML = data.syarat;
-        modalOverlay.querySelector('#modal-content-alur').innerHTML = data.alur;
-        modalOverlay.querySelector('#modal-content-waktu').innerHTML = data.waktu;
-        modalOverlay.querySelector('#modal-content-unduh').innerHTML = data.unduh;
-        
-        // Reset ke tab pertama setiap kali modal dibuka
-        switchTab(modalOverlay.querySelector('.service-modal-tab-btn[data-tab="syarat"]'));
+        // Fungsi untuk ganti tab di dalam modal
+        function switchTab(clickedTab) {
+            modalTabBtns.forEach(btn => btn.classList.remove('active'));
+            modalOverlay.querySelectorAll('.service-modal-tab-content').forEach(content => content.classList.remove('active'));
 
-        // Tampilkan modal
-        modalOverlay.classList.add('active');
-    }
+            clickedTab.classList.add('active');
+            const tabId = clickedTab.getAttribute('data-tab');
+            modalOverlay.querySelector(`#modal-content-${tabId}`).classList.add('active');
+        }
 
-    // Fungsi untuk menutup modal
-    function closeServiceModal() {
-        modalOverlay.classList.remove('active');
-    }
-
-    // Fungsi untuk ganti tab di dalam modal
-    function switchTab(clickedTab) {
-        modalTabBtns.forEach(btn => btn.classList.remove('active'));
-        modalOverlay.querySelectorAll('.service-modal-tab-content').forEach(content => content.classList.remove('active'));
-
-        clickedTab.classList.add('active');
-        const tabId = clickedTab.getAttribute('data-tab');
-        modalOverlay.querySelector(`#modal-content-${tabId}`).classList.add('active');
-    }
-    
-    // ===============================================
-    // == PENAMBAHAN EVENT LISTENER YANG DIPERBAIKI ==
-    // ===============================================
-    serviceCards.forEach(card => {
-        card.addEventListener('click', () => {
-            const serviceKey = card.dataset.serviceKey;
-            openServiceModal(serviceKey);
+        // ===============================================
+        // == PENAMBAHAN EVENT LISTENER YANG DIPERBAIKI ==
+        // ===============================================
+        serviceCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const serviceKey = card.dataset.serviceKey;
+                openServiceModal(serviceKey);
+            });
         });
-    });
 
-    // Event listener untuk tombol tutup
-    modalCloseBtn.addEventListener('click', closeServiceModal);
-    
-    // Event listener untuk ganti tab
-    modalTabBtns.forEach(btn => {
-        btn.addEventListener('click', () => switchTab(btn));
-    });
+        // Event listener untuk tombol tutup
+        modalCloseBtn.addEventListener('click', closeServiceModal);
 
-    // Event listener untuk tutup modal saat klik area luar atau tekan ESC
-    modalOverlay.addEventListener('click', (event) => {
-        if (event.target === modalOverlay) {
-            closeServiceModal();
+        // Event listener untuk ganti tab
+        modalTabBtns.forEach(btn => {
+            btn.addEventListener('click', () => switchTab(btn));
+        });
+
+        // Event listener untuk tutup modal saat klik area luar atau tekan ESC
+        modalOverlay.addEventListener('click', (event) => {
+            if (event.target === modalOverlay) {
+                closeServiceModal();
+            }
+        });
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape' && modalOverlay.classList.contains('active')) {
+                closeServiceModal();
+            }
+        });
+
+        // Membuat fungsi bisa diakses dari tombol `onclick` di HTML (jika masih diperlukan di masa depan)
+        window.openServiceModal = openServiceModal;
+        window.closeServiceModal = closeServiceModal;
+    </script>
+
+    <style>
+        @keyframes bounceInRight {
+            0% {
+                transform: translateX(100%) translateY(-50%);
+            }
+
+            60% {
+                transform: translateX(-10px) translateY(-50%);
+            }
+
+            80% {
+                transform: translateX(5px) translateY(-50%);
+            }
+
+            100% {
+                transform: translateX(0) translateY(-50%);
+            }
         }
-    });
 
-    document.addEventListener('keydown', (event) => {
-        if (event.key === 'Escape' && modalOverlay.classList.contains('active')) {
-            closeServiceModal();
+        /* Back to top button styles */
+        #back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, #800020 0%, #900030 100%);
+            color: white;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            cursor: pointer;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
         }
-    });
 
-    // Membuat fungsi bisa diakses dari tombol `onclick` di HTML (jika masih diperlukan di masa depan)
-    window.openServiceModal = openServiceModal;
-    window.closeServiceModal = closeServiceModal;
-</script>
+        #back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
 
-<style>
-  @keyframes bounceInRight {
-    0% { transform: translateX(100%) translateY(-50%); }
-    60% { transform: translateX(-10px) translateY(-50%); }
-    80% { transform: translateX(5px) translateY(-50%); }
-    100% { transform: translateX(0) translateY(-50%); }
-  }
-  
-  /* Back to top button styles */
-  #back-to-top {
-    position: fixed;
-    bottom: 2rem;
-    right: 2rem;
-    background: linear-gradient(135deg, #800020 0%, #900030 100%);
-    color: white;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    cursor: pointer;
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-  }
-  
-  #back-to-top.visible {
-    opacity: 1;
-    visibility: visible;
-  }
-  
-  #back-to-top:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  }
-</style>
+        #back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
 
-<button id="back-to-top" aria-label="Kembali ke atas">
-  <i class="fas fa-arrow-up"></i>
-</button>
+    <button id="back-to-top" aria-label="Kembali ke atas">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
-<script>
-  // Back to top button functionality
-  const backToTopButton = document.getElementById('back-to-top');
-  
-  // Show/hide button on scroll
-  window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-      backToTopButton.classList.add('visible');
-    } else {
-      backToTopButton.classList.remove('visible');
-    }
-  });
-  
-  // Scroll to top when clicked
-  backToTopButton.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-</script>
+    <script>
+        // Back to top button functionality
+        const backToTopButton = document.getElementById('back-to-top');
+
+        // Show/hide button on scroll
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+
+        // Scroll to top when clicked
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 
 </html>
