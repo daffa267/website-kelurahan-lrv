@@ -1240,7 +1240,7 @@
               alt="Bantuan Sosial Kelurahan"
               class="w-full h-full object-cover object-center scale-105 transition-transform duration-[8000ms] ease-linear"
               loading="eager" />
-
++
             <div class="absolute inset-0 z-10 hero-gradient-overlay"></div>
             <div class="absolute inset-0 z-15 vignette-effect"></div>
             <div
