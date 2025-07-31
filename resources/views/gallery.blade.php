@@ -1326,7 +1326,6 @@
       font-size: clamp(2.5rem, 6vw, 6rem);
       font-weight: 800;
       margin-bottom: 1rem;
-      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
       transform: translateY(50px);
       opacity: 0;
       transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -2526,6 +2525,7 @@
                     </ul>
                 </div>
             </div>
+            
 
             <div class="border-t border-gray-700 mt-12 pt-8 text-center">
                 <p class="text-gray-400 text-sm">
