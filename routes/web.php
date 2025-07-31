@@ -29,3 +29,7 @@ Route::get('/gallery', function () {
 Route::get('/download', function () {
     return view('download');
 });
+
+Route::get('/pengumuman', function () {
+    return view('pengumuman');
+});

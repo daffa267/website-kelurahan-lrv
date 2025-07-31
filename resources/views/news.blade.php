@@ -1949,7 +1949,7 @@
                     <i class="far fa-eye mr-2"></i> 1.2K
                   </span>
                 </div>
-                <a href="news-detail1.html" class="block">
+                <a href="/news-detail1" class="block">
                   <h3
                     class="text-xl font-bold mb-4 leading-snug text-gray-900 hover:text-red-600 transition-colors duration-300 cursor-pointer">
                     Sosialisasi E-KTP Digital untuk Seluruh Ketua RT dan RW
@@ -1960,7 +1960,7 @@
                   administrasi kependudukan di tingkat kelurahan dan RT/RW.
                 </p>
                 <a
-                  href="news-detail1.html"
+                  href="/news-detail1" 
                   class="inline-flex items-center justify-center font-semibold text-primary-700 hover:text-red-600 transition-colors duration-300 group mt-auto w-full text-center"
                   aria-label="Baca selengkapnya tentang Sosialisasi E-KTP Digital">
                   Baca Selengkapnya
@@ -1997,7 +1997,7 @@
                     <i class="far fa-eye mr-2"></i> 980
                   </span>
                 </div>
-                <a href="news-detail2.html" class="block">
+                <a href="/news-detail2" class="block">
                   <h3
                     class="text-xl font-bold mb-4 leading-snug text-gray-900 hover:text-red-600 transition-colors duration-300 cursor-pointer">
                     Kelurahan Raih Penghargaan Adipura Tingkat Kota
@@ -2008,7 +2008,7 @@
                   lingkungan, kelurahan kita meraih penghargaan Adipura.
                 </p>
                 <a
-                  href="news-detail2.html"
+                  href="/news-detail2"
                   class="inline-flex items-center justify-center font-semibold text-primary-700 hover:text-red-600 transition-colors duration-300 group mt-auto w-full text-center"
                   aria-label="Baca selengkapnya tentang Kelurahan Raih Penghargaan Adipura Tingkat Kota">
                   Baca Selengkapnya
