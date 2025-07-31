@@ -1459,27 +1459,40 @@
       </div>
 
       <div
-        class="absolute left-6 top-1/3 z-30 flex flex-col space-y-4 social-vertical">
-        <a
-          href="#"
-          class="group w-12 h-12 rounded-2xl bg-gradient-to-r from-blue-600/20 to-blue-700/20 backdrop-blur-md flex items-center justify-center text-white hover:from-blue-600/40 hover:to-blue-700/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20">
-          <i
-            class="fab fa-facebook-f text-lg group-hover:scale-110 transition-transform duration-300"></i>
-        </a>
+          class="absolute left-6 top-1/3 z-30 flex flex-col space-y-4 social-vertical"
+        >
+          <a
+            href="#"
+            class="group w-12 h-12 rounded-full bg-gradient-to-r from-blue-600/20 to-blue-700/20 backdrop-blur-md flex items-center justify-center text-white hover:from-blue-600/40 hover:to-blue-700/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20"
+          >
+            <i
+              class="fab fa-facebook-f text-lg group-hover:scale-110 transition-transform duration-300"
+            ></i>
+          </a>
 
-        <a
-          href="#"
-          class="group w-12 h-12 rounded-2xl bg-gradient-to-r from-sky-500/20 to-sky-600/20 backdrop-blur-md flex items-center justify-center text-white hover:from-sky-500/40 hover:to-sky-600/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20">
-          <i
-            class="fab fa-twitter text-lg group-hover:scale-110 transition-transform duration-300"></i>
-        </a>
+          <a
+            href="#"
+            class="group w-12 h-12 rounded-full bg-gradient-to-r from-sky-500/20 to-sky-600/20 backdrop-blur-md flex items-center justify-center text-white hover:from-sky-500/40 hover:to-sky-600/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20"
+          >
+            <i
+              class="fab fa-twitter text-lg group-hover:scale-110 transition-transform duration-300"
+            ></i>
+          </a>
 
-        <a
-          href="#"
-          class="group w-12 h-12 rounded-2xl bg-gradient-to-r from-pink-500/20 to-rose-600/20 backdrop-blur-md flex items-center justify-center text-white hover:from-pink-500/40 hover:to-rose-600/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
+          <a
+            href="#"
+            class="group w-12 h-12 rounded-full bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-md flex items-center justify-center text-white hover:from-green-500/40 hover:to-green-600/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20"
+          >
+            <i class="fab fa-whatsapp text-lg group-hover:scale-110 transition-transform duration-300"></i>
+          </a>
+
+          <a
+            href="#"
+            class="group w-12 h-12 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 backdrop-blur-md flex items-center justify-center text-white hover:from-red-500/40 hover:to-orange-500/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20"
+          >
+            <i class="fas fa-envelope text-lg group-hover:scale-110 transition-transform duration-300"></i>
+          </a>
+        </div>
 
       <div
         class="absolute right-20 top-1/2 transform -translate-y-1/2 z-30 w-72">
