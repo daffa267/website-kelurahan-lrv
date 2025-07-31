@@ -1525,78 +1525,97 @@
 </head>
 
 <body class="bg-gray-50">
-    <header class="modern-header relative custom-header-blur">
-        <div class="container mx-auto px-4 py-2 md:py-3 relative z-10">
-            <div class="flex items-center justify-between">
-                <div class="flex items-center space-x-3 md:space-x-4">
-                    <div>
-                        <img src="https://tpikotakel.tanjungpinangkota.go.id/img/logo-tpi.182f9638.png"
-                            alt="Logo Kelurahan"
-                            class="h-11 w-11 md:h-12 md:w-12 object-contain">
-                    </div>
-                    <div class="text-white flex flex-col justify-center">
-                        <span class="text-xs md:text-sm font-semibold uppercase tracking-wider block leading-tight">Kelurahan</span>
-                        <span class="text-base md:text-xl font-bold block leading-tight">Tanjungpinang Kota</span>
-                    </div>
-                </div>
-
-                <div class="hidden md:flex items-center space-x-6">
-                    <div class="hidden md:flex items-center space-x-1 ml-8">
-                        <a href="/" class="nav-item {{ request()->is('/') ? 'active' : '' }}">
-                            <i class="fas fa-home mr-2"></i> Beranda
-                        </a>
-                        <a href="/news" class="nav-item {{ request()->is('news') ? 'active' : '' }}">
-                            <i class="fas fa-newspaper mr-2"></i> Berita
-                        </a>
-                        <a href="/attent" class="nav-item {{ request()->is('attent') ? 'active' : '' }}">
-                            <i class="fas fa-bullhorn mr-2"></i> Pengumuman
-                        </a>
-                        <a href="/gallery" class="nav-item {{ request()->is('gallery') ? 'active' : '' }}">
-                            <i class="fas fa-images mr-2"></i> Galeri
-                        </a>
-                        <a href="/download" class="nav-item {{ request()->is('download') ? 'active' : '' }}">
-                            <i class="fas fa-download mr-2"></i> Download
-                        </a>
-                    </div>
-
-                    <a href="https://icms.tanjungpinangkota.go.id"
-                        class="glass-card px-6 py-2 rounded-full text-white font-medium hover:bg-white/20 transition-all">
-                        <i class="fas fa-sign-in-alt mr-2 text-white"></i>
-                        <span class="text-white font-medium">Login</span>
-                    </a>
-                </div>
-
-                <button id="mobile-menu-btn" class="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
-
-                <div id="mobile-menu" class="md:hidden bg-white shadow-xl hidden">
-                    <div class="container mx-auto px-4 py-3 space-y-2">
-                        <a href="index.html" class="block py-3 px-4 rounded-lg bg-gray-100 text-primary-800 font-medium">
-                            <i class="fas fa-home mr-3"></i> Beranda
-                        </a>
-                        <a href="news.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
-                            <i class="fas fa-newspaper mr-3"></i> Berita
-                        </a>
-                        <a href="attent.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
-                            <i class="fas fa-bullhorn mr-3"></i> Pengumuman
-                        </a>
-                        <a href="gallery.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
-                            <i class="fas fa-images mr-3"></i> Galeri
-                        </a>
-                        <a href="download.html" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
-                            <i class="fas fa-download mr-3"></i> Download
-                        </a>
-                        <div class="pt-2">
-                            <a href="https://icms.tanjungpinangkota.go.id" class="btn-primary block text-center py-3">
-                                <i class="fas fa-sign-in-alt mr-2"></i> Login Admin
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <header class="modern-header relative custom-header-blur">
+    <div class="container mx-auto px-4 py-2 md:py-3 relative z-10">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-3 md:space-x-4">
+          <div>
+            <img
+              src="https://tpikotakel.tanjungpinangkota.go.id/img/logo-tpi.182f9638.png"
+              alt="Logo Kelurahan"
+              class="h-11 w-11 md:h-12 md:w-12 object-contain" />
+          </div>
+          <div class="text-white flex flex-col justify-center">
+            <span
+              class="text-xs md:text-sm font-semibold uppercase tracking-wider block leading-tight">Kelurahan</span>
+            <span class="text-base md:text-xl font-bold block leading-tight">Tanjungpinang Kota</span>
+          </div>
         </div>
-    </header>
+
+        <div class="hidden md:flex items-center space-x-6">
+          <div class="hidden md:flex items-center space-x-1 ml-8">
+            <a href="/" class="nav-item {{ request()->is('/') ? 'active' : '' }}">
+              <i class="fas fa-home mr-2"></i> Beranda
+            </a>
+            <a href="/news" class="nav-item {{ request()->is('news') ? 'active' : '' }}">
+              <i class="fas fa-newspaper mr-2"></i> Berita
+            </a>
+            <a href="/attent" class="nav-item {{ request()->is('attent') ? 'active' : '' }}">
+              <i class="fas fa-bullhorn mr-2"></i> Pengumuman
+            </a>
+            <a href="/gallery" class="nav-item {{ request()->is('gallery') ? 'active' : '' }}">
+              <i class="fas fa-images mr-2"></i> Galeri
+            </a>
+            <a href="/download" class="nav-item {{ request()->is('download') ? 'active' : '' }}">
+              <i class="fas fa-download mr-2"></i> Download
+            </a>
+          </div>
+
+          <a
+            href="https://icms.tanjungpinangkota.go.id"
+            class="glass-card px-6 py-2 rounded-full text-sm hover:bg-white/20 transition-all duration-300 group border border-white/30 text-sm">
+            <i class="fas fa-sign-in-alt mr-2 text-white"></i>
+            <span class="text-white font-medium">Login</span>
+          </a>
+        </div>
+
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+
+        <div
+          id="mobile-menu"
+          class="md:hidden absolute top-full left-0 right-0 mt-2 bg-white shadow-xl hidden">
+          <div class="container mx-auto px-4 py-3 space-y-2">
+            <a
+              href="index.html"
+              class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+              <i class="fas fa-home mr-3"></i> Beranda
+            </a>
+            <a
+              href="news.html"
+              class="block py-3 px-4 rounded-lg bg-gray-100 text-primary-800 font-medium">
+              <i class="fas fa-newspaper mr-3"></i> Berita
+            </a>
+            <a
+              href="attent.html"
+              class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+              <i class="fas fa-bullhorn mr-3"></i> Pengumuman
+            </a>
+            <a
+              href="gallery.html"
+              class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+              <i class="fas fa-images mr-3"></i> Galeri
+            </a>
+            <a
+              href="download.html"
+              class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+              <i class="fas fa-download mr-3"></i> Download
+            </a>
+            <div class="pt-2">
+              <a
+                href="https://icms.tanjungpinangkota.go.id"
+                class="btn-primary block text-center py-3">
+                <i class="fas fa-sign-in-alt mr-2"></i> Login Admin
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
     <div class="hero-banner">
         <div

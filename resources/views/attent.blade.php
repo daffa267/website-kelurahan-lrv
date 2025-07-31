@@ -1098,95 +1098,81 @@
 
 <body class="bg-gray-50">
   <header class="modern-header relative custom-header-blur">
-    <div class="container mx-auto px-4 py-2 md:py-3 relative z-10">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center space-x-3 md:space-x-4">
-          <div>
-            <img src="https://tpikotakel.tanjungpinangkota.go.id/img/logo-tpi.182f9638.png"
-              alt="Logo Kelurahan"
-              class="h-11 w-11 md:h-12 md:w-12 object-contain">
-          </div>
-          <div class="text-white flex flex-col justify-center">
-            <span
-              class="text-xs md:text-sm font-semibold uppercase tracking-wider block leading-tight">Kelurahan</span>
-            <span class="text-base md:text-xl font-bold block leading-tight">Tanjungpinang Kota</span>
-          </div>
+  <div class="container mx-auto px-4 py-2 md:py-3 relative z-10">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center space-x-3 md:space-x-4">
+        <div>
+          <img
+            src="https://tpikotakel.tanjungpinangkota.go.id/img/logo-tpi.182f9638.png"
+            alt="Logo Kelurahan"
+            class="h-11 w-11 md:h-12 md:w-12 object-contain" />
         </div>
-
-        <div class="hidden md:flex items-center space-x-6">
-          <div class="hidden md:flex items-center space-x-1 ml-8">
-            <a href="/" class="nav-item {{ request()->is('/') ? 'active' : '' }}">
-              <i class="fas fa-home mr-2"></i> Beranda
-            </a>
-            <a href="/news" class="nav-item {{ request()->is('news') ? 'active' : '' }}">
-              <i class="fas fa-newspaper mr-2"></i> Berita
-            </a>
-            <a href="/attent" class="nav-item {{ request()->is('attent') ? 'active' : '' }}">
-              <i class="fas fa-bullhorn mr-2"></i> Pengumuman
-            </a>
-            <a href="/gallery" class="nav-item {{ request()->is('gallery') ? 'active' : '' }}">
-              <i class="fas fa-images mr-2"></i> Galeri
-            </a>
-            <a href="/download" class="nav-item {{ request()->is('download') ? 'active' : '' }}">
-              <i class="fas fa-download mr-2"></i> Download
-            </a>
-          </div>
-
-          <a
-            href="https://icms.tanjungpinangkota.go.id"
-            class="glass-card px-6 py-2 rounded-full text-sm hover:bg-white/20 transition-all duration-300 group border border-white/30 text-sm">
-            <i class="fas fa-sign-in-alt mr-2 text-white"></i>
-            <span class="text-white font-medium">Login</span>
+        <div class="text-white flex flex-col justify-center">
+          <span class="text-xs md:text-sm font-semibold uppercase tracking-wider block leading-tight">Kelurahan</span>
+          <span class="text-base md:text-xl font-bold block leading-tight">Tanjungpinang Kota</span>
+        </div>
+      </div>
+      <div class="hidden md:flex items-center space-x-6">
+        <div class="hidden md:flex items-center space-x-1 ml-8">
+          <a href="/" class="nav-item {{ request()->is('/') ? 'active' : '' }}">
+            <i class="fas fa-home mr-2"></i> Beranda
+          </a>
+          <a href="/news" class="nav-item {{ request()->is('news') ? 'active' : '' }}">
+            <i class="fas fa-newspaper mr-2"></i> Berita
+          </a>
+          <a href="/attent" class="nav-item {{ request()->is('attent') ? 'active' : '' }}">
+            <i class="fas fa-bullhorn mr-2"></i> Pengumuman
+          </a>
+          <a href="/gallery" class="nav-item {{ request()->is('gallery') ? 'active' : '' }}">
+            <i class="fas fa-images mr-2"></i> Galeri
+          </a>
+          <a href="/download" class="nav-item {{ request()->is('download') ? 'active' : '' }}">
+            <i class="fas fa-download mr-2"></i> Download
           </a>
         </div>
-
-        <button
-          id="mobile-menu-btn"
-          class="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors">
-          <i class="fas fa-bars text-xl"></i>
-        </button>
-
-        <div
-          id="mobile-menu"
-          class="md:hidden absolute top-full left-0 right-0 mt-2 bg-white shadow-xl hidden">
-          <div class="container mx-auto px-4 py-3 space-y-2">
+        <a
+          href="https://icms.tanjungpinangkota.go.id"
+          class="glass-card px-6 py-2 rounded-full text-sm hover:bg-white/20 transition-all duration-300 group border border-white/30 text-sm">
+          <i class="fas fa-sign-in-alt mr-2 text-white"></i>
+          <span class="text-white font-medium">Login</span>
+        </a>
+      </div>
+      <button
+        id="mobile-menu-btn"
+        class="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+      <div
+        id="mobile-menu"
+        class="md:hidden absolute top-full left-0 right-0 mt-2 bg-white shadow-xl hidden">
+        <div class="container mx-auto px-4 py-3 space-y-2">
+          <a href="/" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+            <i class="fas fa-home mr-3"></i> Beranda
+          </a>
+          <a href="/news" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+            <i class="fas fa-newspaper mr-3"></i> Berita
+          </a>
+          <a href="/attent" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+            <i class="fas fa-bullhorn mr-3"></i> Pengumuman
+          </a>
+          <a href="/gallery" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+            <i class="fas fa-images mr-3"></i> Galeri
+          </a>
+          <a href="/download" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+            <i class="fas fa-download mr-3"></i> Download
+          </a>
+          <div class="pt-2">
             <a
-              href="index.html"
-              class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
-              <i class="fas fa-home mr-3"></i> Beranda
+              href="https://icms.tanjungpinangkota.go.id"
+              class="btn-primary block text-center py-3">
+              <i class="fas fa-sign-in-alt mr-2"></i> Login Admin
             </a>
-            <a
-              href="news.html"
-              class="block py-3 px-4 rounded-lg bg-gray-100 text-primary-800 font-medium">
-              <i class="fas fa-newspaper mr-3"></i> Berita
-            </a>
-            <a
-              href="attent.html"
-              class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
-              <i class="fas fa-bullhorn mr-3"></i> Pengumuman
-            </a>
-            <a
-              href="gallery.html"
-              class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
-              <i class="fas fa-images mr-3"></i> Galeri
-            </a>
-            <a
-              href="download.html"
-              class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
-              <i class="fas fa-download mr-3"></i> Download
-            </a>
-            <div class="pt-2">
-              <a
-                href="https://icms.tanjungpinangkota.go.id"
-                class="btn-primary block text-center py-3">
-                <i class="fas fa-sign-in-alt mr-2"></i> Login Admin
-              </a>
-            </div>
           </div>
         </div>
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
   <main
     class="bg-gradient-to-br from-gray-50 via-white to-gray-100 min-h-screen">
@@ -1240,7 +1226,7 @@
               alt="Bantuan Sosial Kelurahan"
               class="w-full h-full object-cover object-center scale-105 transition-transform duration-[8000ms] ease-linear"
               loading="eager" />
-+
+            +
             <div class="absolute inset-0 z-10 hero-gradient-overlay"></div>
             <div class="absolute inset-0 z-15 vignette-effect"></div>
             <div
@@ -1459,40 +1445,33 @@
       </div>
 
       <div
-          class="absolute left-6 top-1/3 z-30 flex flex-col space-y-4 social-vertical"
-        >
-          <a
-            href="#"
-            class="group w-12 h-12 rounded-full bg-gradient-to-r from-blue-600/20 to-blue-700/20 backdrop-blur-md flex items-center justify-center text-white hover:from-blue-600/40 hover:to-blue-700/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20"
-          >
-            <i
-              class="fab fa-facebook-f text-lg group-hover:scale-110 transition-transform duration-300"
-            ></i>
-          </a>
+        class="absolute left-6 top-1/3 z-30 flex flex-col space-y-4 social-vertical">
+        <a
+          href="#"
+          class="group w-12 h-12 rounded-full bg-gradient-to-r from-blue-600/20 to-blue-700/20 backdrop-blur-md flex items-center justify-center text-white hover:from-blue-600/40 hover:to-blue-700/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20">
+          <i
+            class="fab fa-facebook-f text-lg group-hover:scale-110 transition-transform duration-300"></i>
+        </a>
 
-          <a
-            href="#"
-            class="group w-12 h-12 rounded-full bg-gradient-to-r from-sky-500/20 to-sky-600/20 backdrop-blur-md flex items-center justify-center text-white hover:from-sky-500/40 hover:to-sky-600/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20"
-          >
-            <i
-              class="fab fa-twitter text-lg group-hover:scale-110 transition-transform duration-300"
-            ></i>
-          </a>
+        <a
+          href="#"
+          class="group w-12 h-12 rounded-full bg-gradient-to-r from-sky-500/20 to-sky-600/20 backdrop-blur-md flex items-center justify-center text-white hover:from-sky-500/40 hover:to-sky-600/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20">
+          <i
+            class="fab fa-twitter text-lg group-hover:scale-110 transition-transform duration-300"></i>
+        </a>
 
-          <a
-            href="#"
-            class="group w-12 h-12 rounded-full bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-md flex items-center justify-center text-white hover:from-green-500/40 hover:to-green-600/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20"
-          >
-            <i class="fab fa-whatsapp text-lg group-hover:scale-110 transition-transform duration-300"></i>
-          </a>
+        <a
+          href="#"
+          class="group w-12 h-12 rounded-full bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-md flex items-center justify-center text-white hover:from-green-500/40 hover:to-green-600/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20">
+          <i class="fab fa-whatsapp text-lg group-hover:scale-110 transition-transform duration-300"></i>
+        </a>
 
-          <a
-            href="#"
-            class="group w-12 h-12 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 backdrop-blur-md flex items-center justify-center text-white hover:from-red-500/40 hover:to-orange-500/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20"
-          >
-            <i class="fas fa-envelope text-lg group-hover:scale-110 transition-transform duration-300"></i>
-          </a>
-        </div>
+        <a
+          href="#"
+          class="group w-12 h-12 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 backdrop-blur-md flex items-center justify-center text-white hover:from-red-500/40 hover:to-orange-500/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20">
+          <i class="fas fa-envelope text-lg group-hover:scale-110 transition-transform duration-300"></i>
+        </a>
+      </div>
 
       <div
         class="absolute right-20 top-1/2 transform -translate-y-1/2 z-30 w-72">
