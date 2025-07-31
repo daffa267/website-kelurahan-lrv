@@ -1624,7 +1624,7 @@
                   administrasi kependudukan di tingkat kelurahan dan RT/RW.
                 </p>
                 <a class="text-center font-semibold text-primary-700 hover:text-red-600 cursor-pointer transition-colors duration-300"
-                  href="pengumuman.html"
+                  href="/pengumuman"
                   class="inline-flex items-center font-semibold text-primary-700 hover:text-red-500 transition group mt-auto text-center"
                   aria-label="Baca selengkapnya tentang Sosialisasi E-KTP Digital">
                   Baca Selengkapnya
@@ -1664,7 +1664,7 @@
                   lingkungan, kelurahan kita meraih penghargaan Adipura.
                 </p>
                 <a class="text-center font-semibold text-primary-700 hover:text-red-600 cursor-pointer transition-colors duration-300"
-                  href="pengumuman.html"
+                  href="/pengumuman"
                   class="inline-flex items-center font-semibold text-primary-700 hover:text-primary-900 transition group mt-auto"
                   aria-label="Baca selengkapnya tentang Sosialisasi E-KTP Digital">
                   Baca Selengkapnya
@@ -1705,7 +1705,7 @@
                   memanfaatkan teknologi digital untuk pemasaran.
                 </p>
                 <a class="text-center font-semibold text-primary-700 hover:text-red-600 cursor-pointer transition-colors duration-300"
-                  href="pengumuman.html"
+                  href="/pengumuman"
                   class="inline-flex items-center font-semibold text-primary-700 hover:text-primary-900 transition group mt-auto"
                   aria-label="Baca selengkapnya tentang Sosialisasi E-KTP Digital">
                   Baca Selengkapnya
@@ -1746,7 +1746,7 @@
                   warga lansia dengan protokol kesehatan yang ketat.
                 </p>
                 <a class="text-center font-semibold text-primary-700 hover:text-red-600 cursor-pointer transition-colors duration-300"
-                  href="pengumuman.html"
+                  href="/pengumuman"
                   class="inline-flex items-center font-semibold text-primary-700 hover:text-primary-900 transition group mt-auto"
                   aria-label="Baca selengkapnya tentang Sosialisasi E-KTP Digital">
                   Baca Selengkapnya

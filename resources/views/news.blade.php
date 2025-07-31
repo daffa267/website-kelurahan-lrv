@@ -1949,7 +1949,7 @@
                     <i class="far fa-eye mr-2"></i> 1.2K
                   </span>
                 </div>
-                <a href="/news-detail1" class="block">
+                <a href="/news-detail1" class="block"> 
                   <h3
                     class="text-xl font-bold mb-4 leading-snug text-gray-900 hover:text-red-600 transition-colors duration-300 cursor-pointer">
                     Sosialisasi E-KTP Digital untuk Seluruh Ketua RT dan RW
