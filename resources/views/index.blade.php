@@ -758,6 +758,7 @@
             overflow: hidden;
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
             position: relative;
+            cursor: pointer;
         }
 
         .gallery-image-container {
@@ -769,7 +770,7 @@
         .gallery-image {
             width: 100%;
             height: 100%;
-            object-fit: contain;
+            object-fit: cover;
             transition: transform 0.7s ease;
         }
 
@@ -1418,6 +1419,108 @@
         .btn-secondary:hover {
             background-color: #d1d5db;
         }
+
+        /* ========== NEW: GALLERY VIEWER MODAL STYLES ========== */
+        #gallery-viewer-modal {
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        #gallery-viewer-modal.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        #gallery-viewer-main-image-container img {
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        #gallery-viewer-thumbnails {
+            scrollbar-width: thin;
+            scrollbar-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.1);
+        }
+
+        #gallery-viewer-thumbnails::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        #gallery-viewer-thumbnails::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+
+        /* Gallery item styles - hanya tombol lihat detail yang bisa diklik */
+        .gallery-item {
+            cursor: default;
+        }
+        .gallery-image-container {
+            cursor: default;
+        }
+        .gallery-image {
+            cursor: default;
+            pointer-events: none;
+        }
+        .gallery-overlay {
+            cursor: default;
+        }
+        .gallery-content {
+            cursor: default;
+        }
+        .gallery-view-btn {
+            cursor: pointer;
+            display: inline-block;
+            pointer-events: auto;
+        }
+
+        /* Atur fokus thumbnail galeri modal turun 30% */
+        .viewer-thumbnail {
+            object-position: center 30% !important;
+        }
+
+        #gallery-viewer-thumbnails::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 4px;
+            border: 2px solid transparent;
+            background-clip: content-box;
+        }
+
+        .viewer-thumbnail {
+            border: 2px solid transparent;
+            transition: border-color 0.3s, opacity 0.3s;
+            opacity: 0.6;
+        }
+
+        .viewer-thumbnail.active,
+        .viewer-thumbnail:hover {
+            border-color: #fff;
+            opacity: 1;
+        }
+
+        @media (max-width: 1023px) {
+            #gallery-viewer-modal .flex-row {
+                flex-direction: column;
+            }
+
+            #gallery-viewer-thumbnails {
+                flex-direction: row;
+                overflow-x: auto;
+                overflow-y: hidden;
+                height: auto;
+                max-height: none;
+                width: 100%;
+                padding: 1rem 0 0 0;
+                margin: 0;
+            }
+
+            .viewer-thumbnail {
+                width: 80px;
+                height: 80px;
+                flex-shrink: 0;
+            }
+
+            #gallery-viewer-main {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -1499,7 +1602,7 @@
         <div
             class="absolute left-6 top-1/3 z-30 flex flex-col space-y-4 social-vertical">
             <a
-                href="#"
+                href="https://www.facebook.com/kel.tpikota"
                 class="group w-12 h-12 rounded-full bg-gradient-to-r from-blue-600/20 to-blue-700/20 backdrop-blur-md flex items-center justify-center text-white hover:from-blue-600/40 hover:to-blue-700/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20">
                 <i
                     class="fab fa-facebook-f text-lg group-hover:scale-110 transition-transform duration-300"></i>
@@ -1513,7 +1616,7 @@
             </a>
 
             <a
-                href="#"
+                href="https://www.instagram.com/kel.tpikota/"
                 class="group w-12 h-12 rounded-full bg-gradient-to-r from-pink-500/20 to-rose-600/20 backdrop-blur-md flex items-center justify-center text-white hover:from-pink-500/40 hover:to-rose-600/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20">
                 <i class="fab fa-instagram text-lg group-hover:scale-110 transition-transform duration-300"></i>
             </a>
@@ -1531,7 +1634,7 @@
         <div class="hero-slide" style="background-image: url('https://icms.tanjungpinangkota.go.id/image/posting/berita/7243000000/original/1717577239_ba55e5551c63f1be75f7.jpg');"></div>
 
         <div class="hero-content animate-fade-in">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-lg leading-tight">Selamat Datang di <span class="text-accent-color">Kelurahan Tanjungpinang Kota</span></h1>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-lg leading-tight">Selamat Datang di <span class="text-white">Kelurahan Tanjungpinang Kota</span></h1>
             <p class="text-xl md:text-2xl mb-8 text-white/90 drop-shadow-lg max-w-2xl mx-auto">Melayani dengan hati untuk masyarakat yang sejahtera dan mandiri</p>
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="#berita-final" class="btn-primary px-6 py-3 rounded-full hover:scale-105">
@@ -1631,7 +1734,7 @@
                             <i class="fas fa-newspaper text-[#900030] mr-3"></i>
                             Berita Utama
                         </h2>
-                        <a href="news.html" class="inline-flex items-center text-[#900030] hover:text-white font-medium text-sm transition-all hover:scale-105 group border-2 border-[#900030] hover:bg-[#900030] px-4 py-2 rounded-lg">
+                        <a href="/news" class="inline-flex items-center text-[#900030] hover:text-white font-medium text-sm transition-all hover:scale-105 group border-2 border-[#900030] hover:bg-[#900030] px-4 py-2 rounded-lg">
                             <span class="mr-2">Lihat Semua</span>
                             <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
                         </a>
@@ -1788,7 +1891,7 @@
                                 </div>
 
                                 <div class="mt-4 pt-3 border-t border-gray-200">
-                                    <a href="news.html" class="w-full inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all">
+                                    <a href="/news" class="w-full inline-flex items-center justify-center bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all">
                                         <i class="fas fa-newspaper mr-2"></i> Lihat Semua Berita
                                     </a>
                                 </div>
@@ -1910,7 +2013,7 @@
                             <h3 class="font-bold text-gray-800">Kantor Kelurahan</h3>
                         </div>
                         <div class="space-y-2 text-sm text-gray-600">
-                            <p><i class="fas fa-map-marker-alt text-[#900030] mr-2"></i>Jl. Mesjid No.7, Tanjungpinang Kota, Kec. Tj. Pinang Kota, Kota Tanjung Pinang, Kepulauan Riau.</p>
+                            <p><i class="fas fa-map-marker-alt text-[#900030] mr-2"></i>Jl. Mesjid No.7 Tanjungpinang Kota Kec. Tj. Pinang Kota Kota Tanjung Pinang, Kepulauan Riau, Indonesia.</p>
                             <p><i class="fas fa-phone text-[#900030] mr-2"></i>+62 771 123456</p>
                             <p><i class="fas fa-clock text-[#900030] mr-2"></i>Senin-Jumat: 08.00-16.00 WIB</p>
                         </div>
@@ -1964,24 +2067,24 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="100" data-album-id="penyaluran-bantuan">
                     <div class="gallery-image-container">
                         <img src="https://icms.tanjungpinangkota.go.id/image/posting/berita/7243000000/original/1718954728_47d9af74ec712bd51c9a.jpg"
                             alt="Kegiatan Sosial"
                             class="gallery-image">
                         <div class="gallery-overlay">
                             <div class="gallery-content">
-                                <h3 class="gallery-title">Penyerahan Bingkisan Lansia</h3>
+                                <h3 class="gallery-title">Penyaluran Bantuan Sembako</h3>
                                 <p class="gallery-date">21 Juni 2024</p>
-                                <a href="#" class="gallery-view-btn">
+                                <div class="gallery-view-btn">
                                     <i class="fas fa-search-plus mr-2"></i> Lihat Detail
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="200" data-album-id="penghargaan-terbaik">
                     <div class="gallery-image-container">
                         <img src="https://icms.tanjungpinangkota.go.id/image/posting/berita/7243000000/original/1717577239_ba55e5551c63f1be75f7.jpg"
                             alt="Lomba Kelurahan"
@@ -1990,15 +2093,15 @@
                             <div class="gallery-content">
                                 <h3 class="gallery-title">Penghargaan Kelurahan Terbaik</h3>
                                 <p class="gallery-date">29 Mei 2024</p>
-                                <a href="#" class="gallery-view-btn">
+                                <div class="gallery-view-btn">
                                     <i class="fas fa-search-plus mr-2"></i> Lihat Detail
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+                <div class="gallery-item" data-aos="fade-up" data-aos-delay="300" data-album-id="sadar-hukum">
                     <div class="gallery-image-container">
                         <img src="https://icms.tanjungpinangkota.go.id/image/posting/berita/7243000000/original/1698139006_720de976749805e4c099.jpg"
                             alt="Binaan Hukum"
@@ -2007,17 +2110,17 @@
                             <div class="gallery-content">
                                 <h3 class="gallery-title">Pelatihan Sadar Hukum</h3>
                                 <p class="gallery-date">15 April 2024</p>
-                                <a href="#" class="gallery-view-btn">
+                                <div class="gallery-view-btn">
                                     <i class="fas fa-search-plus mr-2"></i> Lihat Detail
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="mt-8 text-center">
-                <a href="gallery.html" class="btn-primary inline-flex items-center">
+            <div class="mt-8 text-center" data-aos="fade-up" data-aos-delay="100">
+                <a href="/gallery" class="btn-primary inline-flex items-center px-6 py-3 text-lg">
                     <i class="fas fa-images mr-2"></i> Lihat Galeri Lengkap
                 </a>
             </div>
@@ -2161,7 +2264,7 @@
                         </div>
                     </div>
                     <div class="info-card-footer">
-                        <a href="attent.html" class="info-card-link">
+                        <a href="/attent" class="info-card-link">
                             Lihat Semua Pengumuman <i class="fas fa-arrow-right ml-2"></i>
                         </a>
                     </div>
@@ -2199,10 +2302,10 @@
                         Kelurahan Tanjungpinang Kota merupakan salah satu kelurahan di Kecamatan Tanjungpinang Kota, Kota Tanjungpinang, Provinsi Kepulauan Riau.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                        <a href="https://www.facebook.com/kel.tpikota" class="text-gray-300 hover:text-white transition-colors">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                        <a href="https://www.instagram.com/kel.tpikota/" class="text-gray-300 hover:text-white transition-colors">
                             <i class="fab fa-instagram"></i>
                         </a>
                         <a href="#" class="text-gray-300 hover:text-white transition-colors">
@@ -2239,7 +2342,7 @@
                     <ul class="space-y-4">
                         <li class="flex items-start">
                             <i class="fas fa-map-marker-alt text-accent-color mt-1 mr-3"></i>
-                            <span class="text-gray-300">Jl. Mesjid No.7, Tanjungpinang Kota, Kec. Tj. Pinang Kota, Kota Tanjung Pinang, Kepulauan Riau (0°55'39.5"N 104°26'36.7"E)</span>
+                            <span class="text-gray-300">Jl. Mesjid No.7 Tanjungpinang Kota Kec. Tj. Pinang Kota Kota Tanjung Pinang, Kepulauan Riau, Indonesia</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-phone text-accent-color mr-3"></i>
@@ -2288,6 +2391,35 @@
             </div>
             <div class="service-modal-footer">
                 <button class="btn-primary" onclick="closeServiceModal()" style="padding: 10px 20px;">Tutup</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="gallery-viewer-modal" class="hidden fixed inset-0 z-[9999] bg-black/90 backdrop-blur-sm">
+        <div class="relative w-full h-full p-4 md:p-8 flex flex-row">
+            <div class="absolute top-4 left-4 right-4 flex justify-between items-start z-50">
+                <h2 id="gallery-viewer-album-title" class="text-red-500 text-2xl font-bold bg-black/50 px-4 py-2 rounded-lg backdrop-blur-sm"></h2>
+                <button id="gallery-viewer-close" class="text-white text-4xl hover:text-gray-300 transition-colors">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div id="gallery-viewer-main" class="flex-grow h-full flex flex-col justify-center items-center relative lg:mr-4">
+                <h3 id="gallery-viewer-title" class="text-white text-xl font-normal mb-4 text-center"></h3>
+
+                <div id="gallery-viewer-main-image-container" class="relative w-full flex-grow flex items-center justify-center overflow-hidden">
+                    <img id="gallery-viewer-main-image" src="" alt="" class="max-w-full max-h-full object-contain">
+                </div>
+
+                <button id="gallery-viewer-prev" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white w-12 h-12 rounded-full text-2xl flex items-center justify-center transition">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="gallery-viewer-next" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white w-12 h-12 rounded-full text-2xl flex items-center justify-center transition">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div id="gallery-viewer-thumbnails" class="lg:w-48 xl:w-56 flex-shrink-0 h-full overflow-y-auto flex flex-col gap-3 pr-2 pt-20 pb-4">
             </div>
         </div>
     </div>
@@ -2702,8 +2834,174 @@
 
             // Muat chart pertama kali
             activateTab(document.querySelector('.stat-tab.active'));
+
+            // ========== NEW: INITIALIZE GALLERY VIEWER ==========
+            initAdvancedGalleryViewer();
         });
+
+        // ========== NEW: GALLERY VIEWER SCRIPT ==========
+        const albumsData = {
+            'penyaluran-bantuan': {
+                title: 'Penyaluran Bantuan Sembako',
+                images: [{
+                    src: 'https://icms.tanjungpinangkota.go.id/image/posting/berita/7243000000/original/1718954728_47d9af74ec712bd51c9a.jpg',
+                    caption: 'Penyerahan Bantuan oleh Petugas Kelurahan'
+                }, {
+                    src: 'https://icms.tanjungpinangkota.go.id/image/posting/galeri/7243000000/original/1718954056_d8ad3ecfe0494c04463f.jpg',
+                    caption: 'Warga Menerima Paket Sembako'
+                }, {
+                    src: 'https://icms.tanjungpinangkota.go.id/image/posting/galeri/7243000000/original/1718954022_0bf4e65d09285d943a44.jpg',
+                    caption: 'Warga Menerima Paket Sembako'
+                }, {
+                    src: 'https://icms.tanjungpinangkota.go.id/image/posting/galeri/7243000000/original/1718954005_f747783895551781b02e.jpg',
+                    caption: 'Warga Menerima Paket Sembako'
+                }]
+            },
+            'penghargaan-terbaik': {
+                title: 'Penghargaan Kelurahan Terbaik',
+                images: [{
+                    src: 'https://icms.tanjungpinangkota.go.id/image/posting/berita/7243000000/original/1717577239_ba55e5551c63f1be75f7.jpg',
+                    caption: 'Pidato Lurah'
+                }, {
+                    src: 'https://icms.tanjungpinangkota.go.id/image/posting/galeri/7243000000/original/1717576506_8b22e49c8387de293aa6.jpg',
+                    caption: 'Pidato Juri'
+                }, {
+                    src: 'https://icms.tanjungpinangkota.go.id/image/posting/galeri/7243000000/original/1717576460_8a385df58f640e76cace.jpg',
+                    caption: 'Suasana Penilaian Lomba Kelurahan'
+                }, {
+                    src: 'https://icms.tanjungpinangkota.go.id/image/posting/galeri/7243000000/original/1717576271_48ceec080447a0b094f6.jpg',
+                    caption: 'Suasana Penilaian Lomba Kelurahan'
+                }]
+            },
+            'sadar-hukum': {
+                title: 'Pelatihan Sadar Hukum',
+                images: [{
+                    src: 'https://icms.tanjungpinangkota.go.id/image/posting/berita/7243000000/original/1698139006_720de976749805e4c099.jpg',
+                    caption: 'Penyerahan Piagam Penyerahan'
+                }, {
+                    src: 'https://icms.tanjungpinangkota.go.id/image/posting/galeri/7243000000/original/1698138214_edccc3610efbc1e3bd72.jpg',
+                    caption: 'Peserta Pelatihan Mengikuti Acara dengan Antusias'
+                }, {
+                    src: 'https://icms.tanjungpinangkota.go.id/image/posting/galeri/7243000000/original/1698138004_801f3ccda114d781303a.jpg',
+                    caption: 'Foto Bersama'
+                }]
+            }
+        };
+
+        const viewerModal = document.getElementById('gallery-viewer-modal');
+        const viewerMainImage = document.getElementById('gallery-viewer-main-image');
+        const viewerImageTitle = document.getElementById('gallery-viewer-title');
+        const viewerThumbnailsContainer = document.getElementById('gallery-viewer-thumbnails');
+        const viewerPrevBtn = document.getElementById('gallery-viewer-prev');
+        const viewerNextBtn = document.getElementById('gallery-viewer-next');
+        const viewerCloseBtn = document.getElementById('gallery-viewer-close');
+        const viewerAlbumTitle = document.getElementById('gallery-viewer-album-title');
+
+        let viewerCurrentAlbum = [];
+        let viewerCurrentIndex = 0;
+
+        function openGalleryViewer(albumId) {
+            const album = albumsData[albumId];
+            if (!album || !album.images || album.images.length === 0) {
+                console.error("Album not found or is empty:", albumId);
+                return;
+            }
+
+            viewerCurrentAlbum = album.images;
+            viewerCurrentIndex = 0;
+
+            viewerAlbumTitle.textContent = album.title;
+
+            viewerThumbnailsContainer.innerHTML = '';
+            album.images.forEach((img, index) => {
+                const thumb = document.createElement('img');
+                thumb.src = img.src;
+                thumb.alt = img.caption;
+                thumb.className = 'viewer-thumbnail w-full h-24 object-cover rounded-lg cursor-pointer';
+                thumb.dataset.index = index;
+                viewerThumbnailsContainer.appendChild(thumb);
+            });
+
+            updateGalleryView();
+            viewerModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGalleryViewer() {
+            viewerModal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        function updateGalleryView() {
+            if (viewerCurrentAlbum.length === 0) return;
+
+            const image = viewerCurrentAlbum[viewerCurrentIndex];
+
+            viewerMainImage.style.opacity = 0;
+            setTimeout(() => {
+                viewerMainImage.src = image.src;
+                viewerMainImage.alt = image.caption;
+                viewerImageTitle.textContent = image.caption;
+                viewerMainImage.style.opacity = 1;
+            }, 150);
+
+            document.querySelectorAll('.viewer-thumbnail').forEach(thumb => {
+                thumb.classList.toggle('active', parseInt(thumb.dataset.index) === viewerCurrentIndex);
+            });
+
+            const activeThumbnail = document.querySelector(`.viewer-thumbnail[data-index='${viewerCurrentIndex}']`);
+            if (activeThumbnail) {
+                activeThumbnail.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+            }
+        }
+
+        function showNextGalleryImage() {
+            viewerCurrentIndex = (viewerCurrentIndex + 1) % viewerCurrentAlbum.length;
+            updateGalleryView();
+        }
+
+        function showPrevGalleryImage() {
+            viewerCurrentIndex = (viewerCurrentIndex - 1 + viewerCurrentAlbum.length) % viewerCurrentAlbum.length;
+            updateGalleryView();
+        }
+
+        function initAdvancedGalleryViewer() {
+            document.body.addEventListener('click', (e) => {
+                const galleryItem = e.target.closest('.gallery-item');
+                if (galleryItem && galleryItem.dataset.albumId) {
+                    e.preventDefault();
+                    openGalleryViewer(galleryItem.dataset.albumId);
+                }
+            });
+
+            viewerThumbnailsContainer.addEventListener('click', (e) => {
+                if (e.target.matches('.viewer-thumbnail')) {
+                    viewerCurrentIndex = parseInt(e.target.dataset.index);
+                    updateGalleryView();
+                }
+            });
+
+            viewerPrevBtn.addEventListener('click', showPrevGalleryImage);
+            viewerNextBtn.addEventListener('click', showNextGalleryImage);
+            viewerCloseBtn.addEventListener('click', closeGalleryViewer);
+            viewerModal.addEventListener('click', (e) => {
+                if (e.target === viewerModal) {
+                    closeGalleryViewer();
+                }
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (!viewerModal || viewerModal.classList.contains('hidden')) return;
+                if (e.key === 'ArrowRight') showNextGalleryImage();
+                if (e.key === 'ArrowLeft') showPrevGalleryImage();
+                if (e.key === 'Escape') closeGalleryViewer();
+            });
+        }
     </script>
+
     <div id="visitorPopup" class="fixed right-0 top-1/2 transform -translate-y-1/2 z-50 hidden transition-all duration-300 ease-out translate-x-full">
         <div class="bg-white rounded-l-lg shadow-xl border border-gray-200 w-64 relative">
             <button id="closePopup" class="absolute -left-14 top-1/2 transform -translate-y-1/2 bg-red-600 text-white rounded-l-lg shadow-lg hover:bg-red-700 transition border-t border-b border-l border-gray-200 h-28 w-14 flex flex-col items-center justify-center">

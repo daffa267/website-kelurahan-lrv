@@ -2468,10 +2468,10 @@
                         Kelurahan Tanjungpinang Kota merupakan salah satu kelurahan di Kecamatan Tanjungpinang Kota, Kota Tanjungpinang, Provinsi Kepulauan Riau.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                        <a href="https://www.facebook.com/kel.tpikota" class="text-gray-300 hover:text-white transition-colors">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                        <a href="https://www.instagram.com/kel.tpikota/" class="text-gray-300 hover:text-white transition-colors">
                             <i class="fab fa-instagram"></i>
                         </a>
                         <a href="#" class="text-gray-300 hover:text-white transition-colors">
@@ -2508,7 +2508,7 @@
                     <ul class="space-y-4">
                         <li class="flex items-start">
                             <i class="fas fa-map-marker-alt text-accent-color mt-1 mr-3"></i>
-                            <span class="text-gray-300">Jl. Kuantan No.1, Tanjungpinang Kota, Kec. Tanjungpinang Kota, Kota Tanjungpinang, Kepulauan Riau 29111</span>
+                            <span class="text-gray-300">Jl. Mesjid No.7 Tanjungpinang Kota Kec. Tj. Pinang Kota Kota Tanjung Pinang, Kepulauan Riau, Indonesia</span>
                         </li>
                         <li class="flex items-center">
                             <i class="fas fa-phone text-accent-color mr-3"></i>
@@ -2591,6 +2591,50 @@
   </div>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <div id="visitorPopup" class="fixed right-0 top-1/2 transform -translate-y-1/2 z-50 hidden transition-all duration-300 ease-out translate-x-full">
+      <div class="bg-white rounded-l-lg shadow-xl border border-gray-200 w-64 relative">
+          <button id="closePopup" class="absolute -left-14 top-1/2 transform -translate-y-1/2 bg-red-600 text-white rounded-l-lg shadow-lg hover:bg-red-700 transition border-t border-b border-l border-gray-200 h-28 w-14 flex flex-col items-center justify-center">
+              <span class="text-[14px] font-medium transform -rotate-90 whitespace-nowrap flex items-center gap-1">
+                  Kunjungan
+                  <span class="bg-white rounded-full p-1 flex items-center justify-center h-5 w-5">
+                      <i class="fas fa-chevron-down text-[10px] text-red-600"></i>
+                  </span>
+              </span>
+          </button>
+
+          <div class="p-3 text-center">
+              <div class="bg-red-600 px-3 py-2 rounded-tl-lg">
+                  <h3 class="text-white font-bold text-sm">Statistik Kunjungan</h3>
+                  <p class="text-red-100 text-xs">Jumlah kunjungan website</p>
+              </div>
+
+              <div class="py-2">
+                  <div class="mb-3">
+                      <h4 class="font-semibold text-gray-700 text-xs">Total Visitor</h4>
+                      <p class="text-xl font-bold">262.522</p>
+                      <p class="text-green-500 text-xs">10 Online</p>
+                  </div>
+
+                  <div>
+                      <h4 class="font-semibold text-gray-700 text-xs">Total View</h4>
+                      <p class="text-xl font-bold">1.408.960</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <button id="togglePopup" class="fixed right-0 top-1/2 transform -translate-y-1/2 bg-red-600 text-white rounded-l-lg shadow-lg z-40 hover:bg-red-700 transition h-28 w-14 flex flex-col items-center justify-center">
+      <span class="text-[14px] font-medium transform -rotate-90 whitespace-nowrap flex items-center gap-1.5">
+          Kunjungan
+          <span class="bg-white rounded-full p-1.5 flex items-center justify-center h-5 w-5">
+              <i class="fas fa-chevron-up text-xs text-red-600"></i>
+          </span>
+      </span>
+  </button>
+  </div>
+  </div>
   <script>
     // Initialize AOS animation
     AOS.init({
@@ -2605,9 +2649,9 @@
             title: 'Pembangunan Jalan RW 08',
             images: [
                 { src: 'https://podosari.kendalkab.go.id//upload/berita/206_1727147938.jpeg', caption: 'Pengecoran Awal Jalan' },
-                { src: 'https://asset.kompas.com/crops/OivQwLd5W9r3j6Np_Ov6aWf3BTY=/0x0:1000x667/750x500/data/photo/2021/04/08/606e9c398ed50.jpeg', caption: 'Perataan Material' },
-                { src: 'https://www.kalurahan-bleberan.info/assets/files/artikel/sedang_1568257008pembangunan-jalan-dusun-bleberan.jpg', caption: 'Pekerja sedang beristirahat' },
-                { src: 'https://properti.kompas.com/image/2022/01/24/113000621/sempat-viral-ini-fakta-jalan-dicor-pukul-1-dini-hari-di-bekasi-?w=670&q=75', caption: 'Proses Pengeringan Jalan' },
+                { src: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2wOhn4t7ctcdUjw-DFreIflma-76z_RRsWEvuz9WNB12OYoMoMRBRacmj0IPNlr60pt8qtxTphJUCPwqZ2VzhJBiZiami90HHyIvExMZo4y1awZ3sDTME6c3vD54TWBxccEwq6ei93_Zs/s1600/20151206_081059-1.jpg', caption: 'Perataan Material' },
+                { src: 'https://podosari.kendalkab.go.id/upload/tinymce//82.jpeg', caption: 'Pekerja sedang bekerja' },
+                { src: 'https://podosari.kendalkab.go.id/upload/tinymce//83.jpeg', caption: 'Proses Pengeringan Jalan' },
                 { src: 'https://www.abadikini.com/media/files/2021/01/IMG-20210129-WA0019-500x375.jpg', caption: 'Hasil Akhir Pembangunan Jalan' }
             ]
         },
@@ -2615,18 +2659,18 @@
             title: 'Penyaluran Bantuan Sembako',
             images: [
                 { src: 'https://icms.tanjungpinangkota.go.id/image/posting/galeri/7243000000/original/1718954074_bcd67607ce3600415d76.jpg', caption: 'Penyerahan Bantuan Secara Simbolis' },
-                { src: 'https://www.cimahikota.go.id/assets/images/berita/arsip/24Oktober-dinsos.jpg', caption: 'Warga Mengantri Tertib' },
-                { src: 'https://babelprov.go.id/uploads/fajri/DSC_5056.jpg', caption: 'Pemeriksaan Data Penerima' },
-                { src: 'https://www.cendananews.com/wp-content/uploads/2020/07/Penyaluran-Bantuan-Sosial-di-Kantor-Pos-Bandar- Lampung.jpg', caption: 'Paket Sembako Siap Dibagikan' }
+                { src: 'https://icms.tanjungpinangkota.go.id/image/posting/galeri/7243000000/original/1718954056_d8ad3ecfe0494c04463f.jpg', caption: 'Penyerahan Bantuan Secara Simbolis' },
+                { src: 'https://icms.tanjungpinangkota.go.id/image/posting/galeri/7243000000/original/1718954022_0bf4e65d09285d943a44.jpg', caption: 'Penyerahan Bantuan Secara Simbolis' },
+                { src: 'https://icms.tanjungpinangkota.go.id/image/posting/galeri/7243000000/original/1718954005_f747783895551781b02e.jpg', caption: 'Penyerahan Bantuan Secara Simbolis' }
             ]
         },
         'fasilitas-umum': {
             title: 'Fasilitas Umum',
             images: [
-                { src: 'https://icms.tanjungpinangkota.go.id/image/posting/galeri/7243000000/original/1698521090_0054522ba27f383276fa.jpg', caption: 'Penyuntikan Vaksin oleh Petugas' },
-                { src: 'https://www.pom.go.id/new/uploads/images/2022/BERITA/Februari/Vaksinasi_Booster_di_BPOM/Meja_Pendaftaran.jpg', caption: 'Pendaftaran dan Verifikasi Data' },
-                { src: 'https://dinkes.bulelengkab.go.id/public/uploads/post/post_9921_1642125796.jpg', caption: 'Antusiasme Warga Lansia' },
-                { src: 'https://asset.kompas.com/crops/6q_k7-t8d9Lz7Y2E3W4xR1zX0vY=/0x0:1000x667/750x500/data/photo/2022/01/25/61f0081e74af6.jpg', caption: 'Observasi Setelah Vaksinasi' },
+                { src: 'https://icms.tanjungpinangkota.go.id/image/posting/galeri/7243000000/original/1698521090_0054522ba27f383276fa.jpg', caption: 'Gedung Gonggong' },
+                { src: 'https://icms.tanjungpinangkota.go.id/image/posting/galeri/7243000000/original/1698521108_69c9a397f9f2f7f5fb30.jpg', caption: 'Tugu Sirih Tepi Laut' },
+                { src: 'https://icms.tanjungpinangkota.go.id/image/posting/galeri/7243000000/original/1698521008_d7b96536e4158f631282.jpg', caption: 'Lapangan Basket' },
+                { src: 'https://icms.tanjungpinangkota.go.id/image/posting/galeri/7243000000/original/1698521047_e15fd74a7c1cb07553e9.jpg', caption: 'Museum Sultan' },
                 { src: 'https://disk.mediaindonesia.com/thumbs/1200x-/news/2022/02/b77f8841443ac6d55d285a85b9b73792.jpg', caption: 'Petugas Menyiapkan Dosis Vaksin' },
                 { src: 'https://static.republika.co.id/uploads/images/inpicture_slide/warga-lansia-menjalani-vaksinasi-covid-19-dosis-penguat-atau_220126131433-839.jpg', caption: 'Warga Menunggu Giliran' }
             ]
@@ -2851,100 +2895,34 @@
         });
     }
 
-    // Gallery Filter and Search Functionality
-    function initGalleryFilters() {
-      const filterButtons = document.querySelectorAll('.gallery-filter-btn');
-      const galleryCards = document.querySelectorAll('.gallery-card');
-      const searchInput = document.getElementById('gallery-search');
-      const sortSelect = document.getElementById('gallery-sort');
-      const viewButtons = document.querySelectorAll('.view-toggle-btn');
-      const galleryContainer = document.querySelector('.gallery-grid');
+    // === PERBAIKAN: FUNGSI FILTER GALERI ===
+    function filterGallery() {
+      const keyword = document.getElementById('gallery-search-input').value.toLowerCase();
+      const selectedYear = document.getElementById('gallery-year-select').value;
+      const cards = document.querySelectorAll('.gallery-card');
 
-      filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          filterButtons.forEach(btn => {
-            btn.classList.remove('active', 'bg-gradient-to-r', 'from-primary-600', 'to-red-700', 'text-white');
-            btn.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-200');
-          });
+      cards.forEach(card => {
+        const title = (card.dataset.title || '').toLowerCase();
+        const description = (card.dataset.description || '').toLowerCase();
+        const year = card.dataset.year || '';
 
-          button.classList.add('active', 'bg-gradient-to-r', 'from-primary-600', 'to-red-700', 'text-white');
-          button.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-200');
+        // Kondisi 1: Kartu cocok dengan kata kunci
+        // Cocok jika tidak ada kata kunci (keyword kosong), atau jika kata kunci ditemukan di judul/deskripsi.
+        const keywordMatch = !keyword || title.includes(keyword) || description.includes(keyword);
 
-          const filterValue = button.getAttribute('data-filter');
-          filterGallery(filterValue);
-        });
+        // Kondisi 2: Kartu cocok dengan tahun yang dipilih
+        // Cocok jika tidak ada tahun yang dipilih (selectedYear kosong), atau jika tahun kartu sama dengan tahun yang dipilih.
+        const yearMatch = !selectedYear || year === selectedYear;
+
+        // Tampilkan kartu HANYA JIKA cocok dengan KEDUA kondisi (kata kunci DAN tahun).
+        if (keywordMatch && yearMatch) {
+          card.style.display = '';
+          card.classList.add('animate-fadeIn');
+        } else {
+          card.style.display = 'none';
+          card.classList.remove('animate-fadeIn');
+        }
       });
-
-      if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
-          const searchTerm = e.target.value.toLowerCase();
-          filterGalleryBySearch(searchTerm);
-        });
-      }
-
-      if (sortSelect) {
-        sortSelect.addEventListener('change', (e) => {
-          sortGallery(e.target.value);
-        });
-      }
-
-      viewButtons.forEach(button => {
-        button.addEventListener('click', () => {
-          viewButtons.forEach(btn => btn.classList.remove('active', 'bg-primary-600', 'text-white'));
-          button.classList.add('active', 'bg-primary-600', 'text-white');
-
-          const viewType = button.getAttribute('data-view');
-          changeGalleryView(viewType);
-        });
-      });
-
-      function filterGallery(category) {
-        galleryCards.forEach(card => {
-          if (category === 'all' || card.getAttribute('data-category') === category) {
-            card.style.display = 'block';
-            card.classList.add('animate-fadeIn');
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      }
-
-      function filterGalleryBySearch(searchTerm) {
-        galleryCards.forEach(card => {
-          const title = card.getAttribute('data-title') || '';
-          const description = card.getAttribute('data-description') || '';
-          const category = card.getAttribute('data-category') || '';
-
-          if (title.toLowerCase().includes(searchTerm) ||
-            description.toLowerCase().includes(searchTerm) ||
-            category.toLowerCase().includes(searchTerm)) {
-            card.style.display = 'block';
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      }
-
-      function sortGallery(sortType) {
-        const cardsArray = Array.from(galleryCards);
-
-        cardsArray.sort((a, b) => {
-          switch (sortType) {
-            case 'newest':
-              return new Date(b.getAttribute('data-date') || '2024-01-01') - new Date(a.getAttribute('data-date') || '2024-01-01');
-            case 'oldest':
-              return new Date(a.getAttribute('data-date') || '2024-01-01') - new Date(b.getAttribute('data-date') || '2024-01-01');
-            case 'alphabetical':
-              return (a.getAttribute('data-title') || '').localeCompare(b.getAttribute('data-title') || '');
-            case 'popular':
-              return 0;
-            default:
-              return 0;
-          }
-        });
-
-        cardsArray.forEach(card => galleryContainer.appendChild(card));
-      }
     }
     
     // Smooth scroll and back to top
@@ -3069,14 +3047,32 @@
 
     // Initialize all functionality on DOMContentLoaded
     document.addEventListener('DOMContentLoaded', function() {
-      // Initialize existing functionalities
-      initGalleryFilters();
+      // --- PENDAFTARAN EVENT LISTENER UNTUK FILTER ---
+      const searchInput = document.getElementById('gallery-search-input');
+      const filterBtn = document.getElementById('gallery-filter-button');
+      
+      // Terapkan filter saat tombol "Terapkan" diklik
+      if (filterBtn) {
+          filterBtn.addEventListener('click', filterGallery);
+      }
+      
+      // Terapkan filter langsung saat mengetik HANYA jika dropdown tahun tidak dipilih ("Semua Tahun")
+      if (searchInput) {
+          searchInput.addEventListener('input', () => {
+              const yearSelect = document.getElementById('gallery-year-select');
+              if (!yearSelect.value) {
+                  filterGallery();
+              }
+          });
+      }
+
+      // Initialize other functionalities
       initAdvancedGalleryViewer(); 
       initSmoothScroll();
       initHeaderScrollEffect();
       initAlbumModal();
 
-      // --- BEGIN: LOGIKA BARU UNTUK TOMBOL "MUAT LEBIH BANYAK/SEDIKIT" ---
+      // --- BEGIN: LOGIKA TOMBOL "MUAT LEBIH BANYAK" ---
       const loadMoreButton = document.getElementById('load-more-button');
       const loadMoreContent = document.getElementById('load-more-content');
       const galleryContainer = document.getElementById('gallery-container');
@@ -3133,6 +3129,11 @@
               });
               currentPage++;
               
+              // === PERBAIKAN UTAMA DI SINI ===
+              // Setelah item baru ditambahkan, panggil kembali fungsi filter
+              // untuk menerapkan filter yang sedang aktif ke semua item.
+              filterGallery();
+              
               loadMoreButton.classList.remove('loading');
               loadMoreButton.disabled = false;
               loadMoreContent.innerHTML = '<i class="fas fa-plus-circle mr-2"></i> Muat Lebih Banyak';
@@ -3159,19 +3160,21 @@
           return [];
         }
         return [
-            { albumId: 'hut-ri', title: 'Kegiatan HUT RI', date: '17 Agu 2023', photos: 4, img: 'https://asset-2.tstatic.net/batam/foto/bank/images/Warga-Tanjungpinang-meriahkan-HUT-ke-77-RI-2022.jpg', category: 'sosial' },
-            { albumId: 'bazar-umkm', title: 'Bazar UMKM Kelurahan', date: '12 Agu 2023', photos: 3, img: 'https://mejaredaksi.co.id/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-01-at-14.26.45.jpeg', category: 'ekonomi' },
-            { albumId: 'kegiatan-pkk', title: 'Kegiatan PKK', date: '05 Agu 2023', photos: 3, img: 'https://www.infopublik.id/assets/upload/headline//pkk_stunting.jpeg', category: 'kesehatan' },
-            { albumId: 'lomba-kelurahan', title: 'Lomba Kelurahan Terbaik', date: '01 Agu 2023', photos: 4, img: 'https://icms.tanjungpinangkota.go.id/image/posting/galeri/7243000000/original/1717576579_07be559986e0b41b9d53.jpg', category: 'pemerintahan' }
+            { albumId: 'hut-ri', title: 'Kegiatan HUT RI', date: '17 Agu 2023', year: '2023', photos: 4, img: 'https://asset-2.tstatic.net/batam/foto/bank/images/Warga-Tanjungpinang-meriahkan-HUT-ke-77-RI-2022.jpg', category: 'sosial' },
+            { albumId: 'bazar-umkm', title: 'Bazar UMKM Kelurahan', date: '12 Agu 2023', year: '2023', photos: 3, img: 'https://mejaredaksi.co.id/wp-content/uploads/2023/09/WhatsApp-Image-2023-09-01-at-14.26.45.jpeg', category: 'ekonomi' },
+            { albumId: 'kegiatan-pkk', title: 'Kegiatan PKK', date: '05 Agu 2023', year: '2023', photos: 3, img: 'https://www.infopublik.id/assets/upload/headline//pkk_stunting.jpeg', category: 'kesehatan' },
+            { albumId: 'lomba-kelurahan', title: 'Lomba Kelurahan Terbaik', date: '01 Agu 2023', year: '2023', photos: 4, img: 'https://icms.tanjungpinangkota.go.id/image/posting/galeri/7243000000/original/1717576579_07be559986e0b41b9d53.jpg', category: 'pemerintahan' }
         ];
       }
 
       function createGalleryCard(item) {
         const cardDiv = document.createElement('div');
-        cardDiv.className = 'gallery-card group dynamically-loaded'; 
+        cardDiv.className = 'gallery-card group dynamically-loaded';
         cardDiv.dataset.albumId = item.albumId;
         cardDiv.dataset.title = item.title;
         cardDiv.dataset.date = item.date;
+        const year = item.year || (item.date && item.date.match(/\d{4}/) ? item.date.match(/\d{4}/)[0] : '2023');
+        cardDiv.dataset.year = year;
         cardDiv.dataset.category = item.category;
         
         cardDiv.innerHTML = `
@@ -3193,6 +3196,7 @@
       style.textContent = `
         body.loaded { opacity: 1; }
         body { opacity: 0; transition: opacity 0.3s ease; }
+        .viewer-thumbnail { object-position: center 30%; }
       `;
       document.head.appendChild(style);
     });

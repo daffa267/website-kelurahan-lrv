@@ -1594,10 +1594,10 @@
                       Kelurahan Tanjungpinang Kota merupakan salah satu kelurahan di Kecamatan Tanjungpinang Kota, Kota Tanjungpinang, Provinsi Kepulauan Riau.
                   </p>
                   <div class="flex space-x-4">
-                      <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                      <a href="https://www.facebook.com/kel.tpikota" class="text-gray-300 hover:text-white transition-colors">
                           <i class="fab fa-facebook-f"></i>
                       </a>
-                      <a href="#" class="text-gray-300 hover:text-white transition-colors">
+                      <a href="https://www.instagram.com/kel.tpikota/" class="text-gray-300 hover:text-white transition-colors">
                           <i class="fab fa-instagram"></i>
                       </a>
                       <a href="#" class="text-gray-300 hover:text-white transition-colors">
@@ -1634,7 +1634,7 @@
                   <ul class="space-y-4">
                       <li class="flex items-start">
                           <i class="fas fa-map-marker-alt text-accent-color mt-1 mr-3"></i>
-                          <span class="text-gray-300">Jl. Kuantan No.1, Tanjungpinang Kota, Kec. Tanjungpinang Kota, Kota Tanjungpinang, Kepulauan Riau 29111</span>
+                          <span class="text-gray-300">Jl. Mesjid No.7 Tanjungpinang Kota Kec. Tj. Pinang Kota Kota Tanjung Pinang, Kepulauan Riau, Indonesia</span>
                       </li>
                       <li class="flex items-center">
                           <i class="fas fa-phone text-accent-color mr-3"></i>

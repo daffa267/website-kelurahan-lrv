@@ -1378,7 +1378,9 @@
 
       <div id="news-hero-slides" class="h-full relative z-20">
         <div
-          class="news-hero-slide active h-full w-full absolute inset-0 transition-all duration-1000 ease-[cubic-bezier(0.83,0,0.17,1)]">
+          class="news-hero-slide active h-full w-full absolute inset-0 transition-all duration-1000 ease-[cubic-bezier(0.83,0,0.17,1)]"
+          data-title="Sosialisasi E-KTP Digital untuk Seluruh Ketua RT dan RW"
+          data-link="news-detail1.html">
           <div class="absolute inset-0 overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=1920&h=1080&auto=format&fit=crop&ixlib=rb-4.0.3"
@@ -1453,7 +1455,9 @@
         </div>
 
         <div
-          class="news-hero-slide h-full w-full absolute inset-0 transition-all duration-1000 ease-[cubic-bezier(0.83,0,0.17,1)]">
+          class="news-hero-slide h-full w-full absolute inset-0 transition-all duration-1000 ease-[cubic-bezier(0.83,0,0.17,1)]"
+          data-title="Rapat Koordinasi Infrastruktur Desa"
+          data-link="#">
           <div class="absolute inset-0 overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=1920&h=1080&auto=format&fit=crop"
@@ -1528,7 +1532,9 @@
         </div>
 
         <div
-          class="news-hero-slide h-full w-full absolute inset-0 transition-all duration-1000 ease-[cubic-bezier(0.83,0,0.17,1)]">
+          class="news-hero-slide h-full w-full absolute inset-0 transition-all duration-1000 ease-[cubic-bezier(0.83,0,0.17,1)]"
+          data-title="Kelurahan Raih Penghargaan Adipura Tingkat Kota"
+          data-link="news-detail2.html">
           <div class="absolute inset-0 overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?q=80&w=1920&h=1080&auto=format&fit=crop"
@@ -1638,25 +1644,47 @@
       </div>
 
       <div
-        class="absolute left-6 top-1/3 z-30 flex flex-col space-y-4 social-vertical">
+        class="absolute left-6 top-1/3 z-30 flex flex-col space-y-4 social-vertical"
+      >
         <a
           href="#"
-          class="group w-12 h-12 rounded-2xl bg-gradient-to-r from-blue-600/20 to-blue-700/20 backdrop-blur-md flex items-center justify-center text-white hover:from-blue-600/40 hover:to-blue-700/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20">
+          id="share-facebook"
+          class="group w-12 h-12 rounded-full bg-gradient-to-r from-blue-600/20 to-blue-700/20 backdrop-blur-md flex items-center justify-center text-white hover:from-blue-600/40 hover:to-blue-700/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20"
+          title="Bagikan ke Facebook"
+        >
           <i
-            class="fab fa-facebook-f text-lg group-hover:scale-110 transition-transform duration-300"></i>
+            class="fab fa-facebook-f text-lg group-hover:scale-110 transition-transform duration-300"
+          ></i>
         </a>
-
         <a
           href="#"
-          class="group w-12 h-12 rounded-2xl bg-gradient-to-r from-sky-500/20 to-sky-600/20 backdrop-blur-md flex items-center justify-center text-white hover:from-sky-500/40 hover:to-sky-600/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20">
+          id="share-twitter"
+          class="group w-12 h-12 rounded-full bg-gradient-to-r from-sky-500/20 to-sky-600/20 backdrop-blur-md flex items-center justify-center text-white hover:from-sky-500/40 hover:to-sky-600/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20"
+          title="Bagikan ke Twitter"
+        >
           <i
-            class="fab fa-twitter text-lg group-hover:scale-110 transition-transform duration-300"></i>
+            class="fab fa-twitter text-lg group-hover:scale-110 transition-transform duration-300"
+          ></i>
         </a>
-
         <a
           href="#"
-          class="group w-12 h-12 rounded-2xl bg-gradient-to-r from-pink-500/20 to-rose-600/20 backdrop-blur-md flex items-center justify-center text-white hover:from-pink-500/40 hover:to-rose-600/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20">
-          <i class="fab fa-instagram"></i>
+          id="share-whatsapp"
+          class="group w-12 h-12 rounded-full bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-md flex items-center justify-center text-white hover:from-green-500/40 hover:to-green-600/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20"
+          title="Bagikan ke WhatsApp"
+        >
+          <i
+            class="fab fa-whatsapp text-lg group-hover:scale-110 transition-transform duration-300"
+          ></i>
+        </a>
+        <a
+          href="#"
+          id="share-email"
+          class="group w-12 h-12 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 backdrop-blur-md flex items-center justify-center text-white hover:from-red-500/40 hover:to-orange-500/40 transition-all duration-300 hover:scale-110 shadow-xl border border-white/20"
+          title="Bagikan via Email"
+        >
+          <i
+            class="fas fa-envelope text-lg group-hover:scale-110 transition-transform duration-300"
+          ></i>
         </a>
       </div>
 
@@ -1949,7 +1977,7 @@
                     <i class="far fa-eye mr-2"></i> 1.2K
                   </span>
                 </div>
-                <a href="/news-detail1" class="block"> 
+                <a href="/news-detail1" class="block">
                   <h3
                     class="text-xl font-bold mb-4 leading-snug text-gray-900 hover:text-red-600 transition-colors duration-300 cursor-pointer">
                     Sosialisasi E-KTP Digital untuk Seluruh Ketua RT dan RW
@@ -2728,12 +2756,12 @@
           </p>
           <div class="flex space-x-4">
             <a
-              href="#"
+              href="https://www.facebook.com/kel.tpikota"
               class="text-gray-300 hover:text-white transition-colors">
               <i class="fab fa-facebook-f"></i>
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/kel.tpikota/"
               class="text-gray-300 hover:text-white transition-colors">
               <i class="fab fa-instagram"></i>
             </a>
@@ -2778,8 +2806,7 @@
             <li class="flex items-start">
               <i
                 class="fas fa-map-marker-alt text-accent-color mt-1 mr-3"></i>
-              <span class="text-gray-300">Jl. Kuantan No.1, Tanjungpinang Kota, Kec. Tanjungpinang
-                Kota, Kota Tanjungpinang, Kepulauan Riau 29111</span>
+              <span class="text-gray-300">Jl. Mesjid No.7 Tanjungpinang Kota Kec. Tj. Pinang Kota Kota Tanjung Pinang, Kepulauan Riau, Indonesia</span>
             </li>
             <li class="flex items-center">
               <i class="fas fa-phone text-accent-color mr-3"></i>
@@ -2865,6 +2892,73 @@
   </button>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // --- SHARE FUNCTIONALITY FOR SOCIAL MEDIA VERTICAL ---
+    function getCurrentSlideData() {
+      const slides = document.querySelectorAll(".news-hero-slide");
+      for (const slide of slides) {
+        if (slide.classList.contains("active")) {
+          return {
+            title: slide.getAttribute("data-title") || document.title,
+            link: slide.getAttribute("data-link") || window.location.href,
+          };
+        }
+      }
+      return { title: document.title, link: window.location.href };
+    }
+
+    function openShareWindow(url) {
+      window.open(url, "_blank", "width=600,height=500");
+    }
+
+    document
+      .getElementById("share-facebook")
+      .addEventListener("click", function (e) {
+        e.preventDefault();
+        const data = getCurrentSlideData();
+        const shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+          location.origin + "/" + data.link
+        )}&t=${encodeURIComponent(data.title)}`;
+        openShareWindow(shareUrl);
+      });
+
+    document
+      .getElementById("share-twitter")
+      .addEventListener("click", function (e) {
+        e.preventDefault();
+        const data = getCurrentSlideData();
+        const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+          data.title
+        )}&url=${encodeURIComponent(location.origin + "/" + data.link)}`;
+        openShareWindow(shareUrl);
+      });
+
+    document
+      .getElementById("share-whatsapp")
+      .addEventListener("click", function (e) {
+        e.preventDefault();
+        const data = getCurrentSlideData();
+        const shareText = `${data.title} ${
+          location.origin + "/" + data.link
+        }`;
+        const shareUrl = `https://wa.me/?text=${encodeURIComponent(
+          shareText
+        )}`;
+        openShareWindow(shareUrl);
+      });
+
+    document
+      .getElementById("share-email")
+      .addEventListener("click", function (e) {
+        e.preventDefault();
+        const data = getCurrentSlideData();
+        const subject = encodeURIComponent(data.title);
+        const body = encodeURIComponent(
+          `${data.title}\n${location.origin + "/" + data.link}`
+        );
+        window.location.href = `mailto:?subject=${subject}&body=${body}`;
+      });
+  </script>
   <script>
     // Mobile menu toggle
     const mobileMenuBtn = document.getElementById("mobile-menu-btn");
@@ -3296,39 +3390,39 @@
     }
 
     // Tab switching functionality for spotlight section
-    const tabButtons = document.querySelectorAll('.spotlight-tab-btn');
-    const tabContents = document.querySelectorAll('.spotlight-tab-content');
-    const spotlightBtnText = document.getElementById('spotlight-btn-text');
+    const tabButtons = document.querySelectorAll(".spotlight-tab-btn");
+    const tabContents = document.querySelectorAll(".spotlight-tab-content");
+    const spotlightBtnText = document.getElementById("spotlight-btn-text");
 
     if (tabButtons.length > 0) {
-      tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
           // Remove active class from all buttons and contents
-          tabButtons.forEach(btn => {
-            btn.classList.remove('active');
-            btn.querySelector('div').classList.remove('opacity-100');
-            btn.querySelector('div').classList.add('opacity-0');
+          tabButtons.forEach((btn) => {
+            btn.classList.remove("active");
+            btn.querySelector("div").classList.remove("opacity-100");
+            btn.querySelector("div").classList.add("opacity-0");
           });
 
-          tabContents.forEach(content => {
-            content.classList.remove('active');
-            content.classList.add('hidden');
+          tabContents.forEach((content) => {
+            content.classList.remove("active");
+            content.classList.add("hidden");
           });
 
           // Add active class to clicked button and corresponding content
-          button.classList.add('active');
-          button.querySelector('div').classList.remove('opacity-0');
-          button.querySelector('div').classList.add('opacity-100');
+          button.classList.add("active");
+          button.querySelector("div").classList.remove("opacity-0");
+          button.querySelector("div").classList.add("opacity-100");
 
-          const tabId = button.getAttribute('data-tab');
-          document.getElementById(tabId).classList.add('active');
-          document.getElementById(tabId).classList.remove('hidden');
+          const tabId = button.getAttribute("data-tab");
+          document.getElementById(tabId).classList.add("active");
+          document.getElementById(tabId).classList.remove("hidden");
 
           // Update button text based on active tab
-          if (tabId === 'terkini') {
-            spotlightBtnText.textContent = 'Lihat Semua Berita Terkini';
+          if (tabId === "terkini") {
+            spotlightBtnText.textContent = "Lihat Semua Berita Terkini";
           } else {
-            spotlightBtnText.textContent = 'Lihat Semua Berita Populer';
+            spotlightBtnText.textContent = "Lihat Semua Berita Populer";
           }
         });
       });
