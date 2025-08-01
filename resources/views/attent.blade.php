@@ -1098,81 +1098,81 @@
 
 <body class="bg-gray-50">
   <header class="modern-header relative custom-header-blur">
-  <div class="container mx-auto px-4 py-2 md:py-3 relative z-10">
-    <div class="flex items-center justify-between">
-      <div class="flex items-center space-x-3 md:space-x-4">
-        <div>
-          <img
-            src="https://tpikotakel.tanjungpinangkota.go.id/img/logo-tpi.182f9638.png"
-            alt="Logo Kelurahan"
-            class="h-11 w-11 md:h-12 md:w-12 object-contain" />
+    <div class="container mx-auto px-4 py-2 md:py-3 relative z-10">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-3 md:space-x-4">
+          <div>
+            <img
+              src="https://tpikotakel.tanjungpinangkota.go.id/img/logo-tpi.182f9638.png"
+              alt="Logo Kelurahan"
+              class="h-11 w-11 md:h-12 md:w-12 object-contain" />
+          </div>
+          <div class="text-white flex flex-col justify-center">
+            <span class="text-xs md:text-sm font-semibold uppercase tracking-wider block leading-tight">Kelurahan</span>
+            <span class="text-base md:text-xl font-bold block leading-tight">Tanjungpinang Kota</span>
+          </div>
         </div>
-        <div class="text-white flex flex-col justify-center">
-          <span class="text-xs md:text-sm font-semibold uppercase tracking-wider block leading-tight">Kelurahan</span>
-          <span class="text-base md:text-xl font-bold block leading-tight">Tanjungpinang Kota</span>
-        </div>
-      </div>
-      <div class="hidden md:flex items-center space-x-6">
-        <div class="hidden md:flex items-center space-x-1 ml-8">
-          <a href="/" class="nav-item {{ request()->is('/') ? 'active' : '' }}">
-            <i class="fas fa-home mr-2"></i> Beranda
-          </a>
-          <a href="/news" class="nav-item {{ request()->is('news') ? 'active' : '' }}">
-            <i class="fas fa-newspaper mr-2"></i> Berita
-          </a>
-          <a href="/attent" class="nav-item {{ request()->is('attent') ? 'active' : '' }}">
-            <i class="fas fa-bullhorn mr-2"></i> Pengumuman
-          </a>
-          <a href="/gallery" class="nav-item {{ request()->is('gallery') ? 'active' : '' }}">
-            <i class="fas fa-images mr-2"></i> Galeri
-          </a>
-          <a href="/download" class="nav-item {{ request()->is('download') ? 'active' : '' }}">
-            <i class="fas fa-download mr-2"></i> Download
-          </a>
-        </div>
-        <a
-          href="https://icms.tanjungpinangkota.go.id"
-          class="glass-card px-6 py-2 rounded-full text-sm hover:bg-white/20 transition-all duration-300 group border border-white/30 text-sm">
-          <i class="fas fa-sign-in-alt mr-2 text-white"></i>
-          <span class="text-white font-medium">Login</span>
-        </a>
-      </div>
-      <button
-        id="mobile-menu-btn"
-        class="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors">
-        <i class="fas fa-bars text-xl"></i>
-      </button>
-      <div
-        id="mobile-menu"
-        class="md:hidden absolute top-full left-0 right-0 mt-2 bg-white shadow-xl hidden">
-        <div class="container mx-auto px-4 py-3 space-y-2">
-          <a href="/" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
-            <i class="fas fa-home mr-3"></i> Beranda
-          </a>
-          <a href="/news" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
-            <i class="fas fa-newspaper mr-3"></i> Berita
-          </a>
-          <a href="/attent" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
-            <i class="fas fa-bullhorn mr-3"></i> Pengumuman
-          </a>
-          <a href="/gallery" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
-            <i class="fas fa-images mr-3"></i> Galeri
-          </a>
-          <a href="/download" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
-            <i class="fas fa-download mr-3"></i> Download
-          </a>
-          <div class="pt-2">
-            <a
-              href="https://icms.tanjungpinangkota.go.id"
-              class="btn-primary block text-center py-3">
-              <i class="fas fa-sign-in-alt mr-2"></i> Login Admin
+        <div class="hidden md:flex items-center space-x-6">
+          <div class="hidden md:flex items-center space-x-1 ml-8">
+            <a href="/" class="nav-item {{ request()->is('/') ? 'active' : '' }}">
+              <i class="fas fa-home mr-2"></i> Beranda
             </a>
+            <a href="/news" class="nav-item {{ request()->is('news') ? 'active' : '' }}">
+              <i class="fas fa-newspaper mr-2"></i> Berita
+            </a>
+            <a href="/attent" class="nav-item {{ request()->is('attent') ? 'active' : '' }}">
+              <i class="fas fa-bullhorn mr-2"></i> Pengumuman
+            </a>
+            <a href="/gallery" class="nav-item {{ request()->is('gallery') ? 'active' : '' }}">
+              <i class="fas fa-images mr-2"></i> Galeri
+            </a>
+            <a href="/download" class="nav-item {{ request()->is('download') ? 'active' : '' }}">
+              <i class="fas fa-download mr-2"></i> Download
+            </a>
+          </div>
+          <a
+            href="https://icms.tanjungpinangkota.go.id"
+            class="glass-card px-6 py-2 rounded-full text-sm hover:bg-white/20 transition-all duration-300 group border border-white/30 text-sm">
+            <i class="fas fa-sign-in-alt mr-2 text-white"></i>
+            <span class="text-white font-medium">Login</span>
+          </a>
+        </div>
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden text-white p-2 rounded-lg hover:bg-white/10 transition-colors">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+        <div
+          id="mobile-menu"
+          class="md:hidden absolute top-full left-0 right-0 mt-2 bg-white shadow-xl hidden">
+          <div class="container mx-auto px-4 py-3 space-y-2">
+            <a href="/" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+              <i class="fas fa-home mr-3"></i> Beranda
+            </a>
+            <a href="/news" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+              <i class="fas fa-newspaper mr-3"></i> Berita
+            </a>
+            <a href="/attent" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+              <i class="fas fa-bullhorn mr-3"></i> Pengumuman
+            </a>
+            <a href="/gallery" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+              <i class="fas fa-images mr-3"></i> Galeri
+            </a>
+            <a href="/download" class="block py-3 px-4 rounded-lg hover:bg-gray-100 transition-colors">
+              <i class="fas fa-download mr-3"></i> Download
+            </a>
+            <div class="pt-2">
+              <a
+                href="https://icms.tanjungpinangkota.go.id"
+                class="btn-primary block text-center py-3">
+                <i class="fas fa-sign-in-alt mr-2"></i> Login Admin
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
   <main
     class="bg-gradient-to-br from-gray-50 via-white to-gray-100 min-h-screen">
@@ -1234,7 +1234,7 @@
           </div>
 
           <div
-            class="news-hero-content container mx-auto h-full flex items-end pb-24 relative z-30 px-6"
+            class="news-hero-content container mx-auto h-full flex items-end pb-24 relative z-30 px-6" style="z-index:50;position:relative;"
             style="transform: translateY(-40px)">
             <div class="max-w-4xl w-full">
               <div class="mb-2">
@@ -1271,8 +1271,8 @@
 
               <div class="mt-8">
                 <a
-                  href="pengumuman.html"
-                  class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-600 to-red-700 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-300 group border border-white/20 text-sm hover:from-red-400 hover:to-red-500">
+                  href="{{ route('pengumuman') }}"
+                  class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-600 to-red-700 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-300 group border border-white/20 text-sm">
                   <span class="text-lg">Baca Selengkapnya</span>
                   <i class="fas fa-arrow-right ml-3 text-lg group-hover:translate-x-1.5 transition-transform duration-300"></i>
                 </a>
@@ -1297,7 +1297,7 @@
           </div>
 
           <div
-            class="news-hero-content container mx-auto h-full flex items-end pb-24 relative z-30 px-6"
+            class="news-hero-content container mx-auto h-full flex items-end pb-24 relative z-30 px-6" style="z-index:50;position:relative;"
             style="transform: translateY(-40px)">
             <div class="max-w-4xl w-full">
               <div class="mb-2">
@@ -1334,7 +1334,7 @@
 
               <div class="mt-8">
                 <a
-                  href="pengumuman.html"
+                  href="{{ route('pengumuman') }}"
                   class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-700 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-300 group border border-white/20 text-sm">
                   <span class="text-lg">Baca Selengkapnya</span>
                   <i
@@ -1361,7 +1361,7 @@
           </div>
 
           <div
-            class="news-hero-content container mx-auto h-full flex items-end pb-24 relative z-30 px-6"
+            class="news-hero-content container mx-auto h-full flex items-end pb-24 relative z-30 px-6" style="z-index:50;position:relative;"
             style="transform: translateY(-40px)">
             <div class="max-w-4xl w-full">
               <div class="mb-2">
@@ -1398,7 +1398,7 @@
 
               <div class="mt-8">
                 <a
-                  href="pengumuman.html"
+                  href="{{ route('pengumuman') }}"
                   class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-700 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-300 group border border-white/20 text-sm">
                   <span class="text-lg">Baca Selengkapnya</span>
                   <i
@@ -1483,7 +1483,7 @@
           </h3>
 
           <div class="space-y-4">
-            <a href="#" class="group block">
+            <a href="{{ route('pengumuman') }}" class="group block">
               <div class="flex items-start gap-3">
                 <div
                   class="flex-shrink-0 w-3 h-3 mt-1.5 bg-red-500 rounded-full animate-pulse"></div>
@@ -1497,7 +1497,7 @@
               </div>
             </a>
 
-            <a href="#" class="group block">
+            <a href="{{ route('pengumuman') }}" class="group block">
               <div class="flex items-start gap-3">
                 <div
                   class="flex-shrink-0 w-3 h-3 mt-1.5 bg-blue-500 rounded-full animate-pulse"
@@ -1512,7 +1512,7 @@
               </div>
             </a>
 
-            <a href="#" class="group block">
+            <a href="{{ route('pengumuman') }}" class="group block">
               <div class="flex items-start gap-3">
                 <div
                   class="flex-shrink-0 w-3 h-3 mt-1.5 bg-green-500 rounded-full animate-pulse"
@@ -1595,16 +1595,17 @@
                     <i class="far fa-eye mr-2"></i> 1.2K
                   </span>
                 </div>
-                <h3 class="text-xl font-bold mb-4 leading-snug text-gray-900 hover:text-red-600 cursor-pointer transition-colors duration-300">
-                  Sosialisasi E-KTP Digital untuk Seluruh Ketua RT dan RW
-                </h3>
+                <a href="{{ route('pengumuman') }}">
+                  <h3 class="text-xl font-bold mb-4 leading-snug text-gray-900 hover:text-red-600 cursor-pointer transition-colors duration-300">
+                    Sosialisasi E-KTP Digital untuk Seluruh Ketua RT dan RW
+                  </h3>
+                </a>
                 <p class="text-gray-600 mb-5 line-clamp-2 flex-grow">
                   Peluncuran program e-KTP digital untuk memudahkan
                   administrasi kependudukan di tingkat kelurahan dan RT/RW.
                 </p>
-                <a class="text-center font-semibold text-primary-700 hover:text-red-600 cursor-pointer transition-colors duration-300"
-                  href="/pengumuman"
-                  class="inline-flex items-center font-semibold text-primary-700 hover:text-red-500 transition group mt-auto text-center"
+                <a href="{{ route('pengumuman') }}"
+                  class="inline-flex items-center justify-center font-semibold text-primary-700 hover:text-red-600 transition group mt-auto text-center"
                   aria-label="Baca selengkapnya tentang Sosialisasi E-KTP Digital">
                   Baca Selengkapnya
                   <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
@@ -1635,16 +1636,17 @@
                     <i class="far fa-eye mr-2"></i> 980
                   </span>
                 </div>
-                <h3 class="text-xl font-bold mb-4 leading-snug text-gray-900 hover:text-red-600 cursor-pointer transition-colors duration-300">
-                  Kelurahan Raih Penghargaan Adipura Tingkat Kota
-                </h3>
+                <a href="{{ route('pengumuman') }}">
+                  <h3 class="text-xl font-bold mb-4 leading-snug text-gray-900 hover:text-red-600 cursor-pointer transition-colors duration-300">
+                    Kelurahan Raih Penghargaan Adipura Tingkat Kota
+                  </h3>
+                </a>
                 <p class="text-gray-600 mb-5 line-clamp-2 flex-grow">
                   Atas prestasi dalam menjaga kebersihan dan penghijauan
                   lingkungan, kelurahan kita meraih penghargaan Adipura.
                 </p>
-                <a class="text-center font-semibold text-primary-700 hover:text-red-600 cursor-pointer transition-colors duration-300"
-                  href="/pengumuman"
-                  class="inline-flex items-center font-semibold text-primary-700 hover:text-primary-900 transition group mt-auto"
+                <a href="{{ route('pengumuman') }}"
+                  class="inline-flex items-center font-semibold text-primary-700 hover:text-red-600 transition group mt-auto text-center"
                   aria-label="Baca selengkapnya tentang Sosialisasi E-KTP Digital">
                   Baca Selengkapnya
                   <i
@@ -1676,16 +1678,17 @@
                     <i class="far fa-eye mr-2"></i> 1.3K
                   </span>
                 </div>
-                <h3 class="text-xl font-bold mb-4 leading-snug text-gray-900 hover:text-red-600 cursor-pointer transition-colors duration-300">
-                  Pelatihan UMKM: Strategi Pemasaran Digital di Era Modern
-                </h3>
+                <a href="{{ route('pengumuman') }}">
+                  <h3 class="text-xl font-bold mb-4 leading-snug text-gray-900 hover:text-red-600 cursor-pointer transition-colors duration-300">
+                    Pelatihan UMKM: Strategi Pemasaran Digital di Era Modern
+                  </h3>
+                </a>
                 <p class="text-gray-600 mb-5 line-clamp-2 flex-grow">
                   Program pelatihan untuk pengusaha kecil dan menengah dalam
                   memanfaatkan teknologi digital untuk pemasaran.
                 </p>
-                <a class="text-center font-semibold text-primary-700 hover:text-red-600 cursor-pointer transition-colors duration-300"
-                  href="/pengumuman"
-                  class="inline-flex items-center font-semibold text-primary-700 hover:text-primary-900 transition group mt-auto"
+                <a href="{{ route('pengumuman') }}"
+                  class="inline-flex items-center font-semibold text-primary-700 hover:text-red-600 transition group mt-auto text-center"
                   aria-label="Baca selengkapnya tentang Sosialisasi E-KTP Digital">
                   Baca Selengkapnya
                   <i
@@ -1717,16 +1720,17 @@
                     <i class="far fa-eye mr-2"></i> 890
                   </span>
                 </div>
-                <h3 class="text-xl font-bold mb-4 leading-snug text-gray-900 hover:text-red-600 cursor-pointer transition-colors duration-300">
-                  Program Vaksinasi COVID-19 Booster untuk Lansia
-                </h3>
+                <a href="{{ route('pengumuman') }}">
+                  <h3 class="text-xl font-bold mb-4 leading-snug text-gray-900 hover:text-red-600 cursor-pointer transition-colors duration-300">
+                    Program Vaksinasi COVID-19 Booster untuk Lansia
+                  </h3>
+                </a>
                 <p class="text-gray-600 mb-5 line-clamp-2 flex-grow">
                   Kelurahan mengadakan program vaksinasi booster khusus untuk
                   warga lansia dengan protokol kesehatan yang ketat.
                 </p>
-                <a class="text-center font-semibold text-primary-700 hover:text-red-600 cursor-pointer transition-colors duration-300"
-                  href="/pengumuman"
-                  class="inline-flex items-center font-semibold text-primary-700 hover:text-primary-900 transition group mt-auto"
+                <a href="{{ route('pengumuman') }}"
+                  class="inline-flex items-center font-semibold text-primary-700 hover:text-red-600 transition group mt-auto text-center"
                   aria-label="Baca selengkapnya tentang Sosialisasi E-KTP Digital">
                   Baca Selengkapnya
                   <i
@@ -1758,9 +1762,11 @@
                     <i class="far fa-eye mr-2"></i> 1.1K
                   </span>
                 </div>
-                <h3 class="text-xl font-bold mb-4 leading-snug text-gray-900 hover:text-red-600 cursor-pointer transition-colors duration-300">
-                  Gotong Royong Bersih-Bersih Lingkungan RT 05
-                </h3>
+                <a href="{{ route('pengumuman') }}">
+                  <h3 class="text-xl font-bold mb-4 leading-snug text-gray-900 hover:text-red-600 cursor-pointer transition-colors duration-300">
+                    Gotong Royong Bersih-Bersih Lingkungan RT 05
+                  </h3>
+                </a>
                 <p class="text-gray-600 mb-5 line-clamp-2 flex-grow">
                   Kegiatan gotong royong membersihkan lingkungan yang diikuti
                   oleh seluruh warga RT 05 untuk menjaga kebersihan.
@@ -1799,9 +1805,11 @@
                     <i class="far fa-eye mr-2"></i> 750
                   </span>
                 </div>
-                <h3 class="text-xl font-bold mb-4 leading-snug text-gray-900 hover:text-red-600 cursor-pointer transition-colors duration-300">
-                  Pelatihan Komputer Dasar untuk Remaja
-                </h3>
+                <a href="{{ route('pengumuman') }}">
+                  <h3 class="text-xl font-bold mb-4 leading-snug text-gray-900 hover:text-red-600 cursor-pointer transition-colors duration-300">
+                    Pelatihan Komputer Dasar untuk Remaja
+                  </h3>
+                </a>
                 <p class="text-gray-600 mb-5 line-clamp-2 flex-grow">
                   Program pelatihan komputer dasar yang ditujukan untuk remaja
                   agar dapat mengikuti perkembangan teknologi.
@@ -1840,9 +1848,11 @@
                     <i class="far fa-eye mr-2"></i> 1.5K
                   </span>
                 </div>
-                <h3 class="text-xl font-bold mb-4 leading-snug text-gray-900 hover:text-red-600 cursor-pointer transition-colors duration-300">
-                  Pembangunan Jalan Beton di Gang Mawar
-                </h3>
+                <a href="{{ route('pengumuman') }}">
+                  <h3 class="text-xl font-bold mb-4 leading-snug text-gray-900 hover:text-red-600 cursor-pointer transition-colors duration-300">
+                    Pembangunan Jalan Beton di Gang Mawar
+                  </h3>
+                </a>
                 <p class="text-gray-600 mb-5 line-clamp-2 flex-grow">
                   Proyek pembangunan jalan beton sepanjang 200 meter di Gang
                   Mawar untuk meningkatkan akses transportasi warga.
@@ -1922,9 +1932,11 @@
                     <i class="far fa-eye mr-2"></i> 980
                   </span>
                 </div>
-                <h3 class="text-xl font-bold mb-4 leading-snug text-gray-900 hover:text-red-600 cursor-pointer transition-colors duration-300">
-                  Penyaluran Bantuan Sembako untuk Keluarga Kurang Mampu
-                </h3>
+                <a href="{{ route('pengumuman') }}" style="text-decoration:none">
+                  <h3 class="text-xl font-bold mb-4 leading-snug text-gray-900 hover:text-red-600 cursor-pointer transition-colors duration-300">
+                    Penyaluran Bantuan Sembako untuk Keluarga Kurang Mampu
+                  </h3>
+                </a>
                 <p class="text-gray-600 mb-5 line-clamp-2 flex-grow">
                   Program bantuan sembako bulanan yang disalurkan kepada 150
                   keluarga kurang mampu di wilayah kelurahan.

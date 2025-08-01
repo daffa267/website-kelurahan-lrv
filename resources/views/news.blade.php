@@ -1443,8 +1443,8 @@
 
               <div class="mt-10">
                 <a
-                  href="news-detail1.html"
-                  class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-600 to-rose-800 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-300 group border border-white/20 text-sm">
+  href="{{ route('news.show', ['slug' => 'sosialisasi-e-ktp-digital']) }}"
+  class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-red-600 to-rose-800 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-300 group border border-white/20 text-sm">
                   <span class="text-lg">Baca Selengkapnya</span>
                   <i
                     class="fas fa-arrow-right ml-3 text-lg group-hover:translate-x-1.5 transition-transform duration-300"></i>
@@ -1597,8 +1597,8 @@
 
               <div class="mt-10">
                 <a
-                  href="news-detail2.html"
-                  class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-700 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-300 group border border-white/20 text-sm">
+  href="{{ route('news.show', ['slug' => 'adipura-tingkat-kota']) }}"
+  class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-700 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all duration-300 group border border-white/20 text-sm">
                   <span class="text-lg">Baca Selengkapnya</span>
                   <i
                     class="fas fa-arrow-right ml-3 text-lg group-hover:translate-x-1.5 transition-transform duration-300"></i>
